@@ -1,5 +1,0 @@
-Data set: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download 
-The dataset contains sales data from the main Brazilian online shopping platform Olist. The data combines orders from many different sellers to buyers. 
-Some of the things that I hope to achieve with this dataset is do sentiment and topic analysis on the feedback to try and figure out some of the most common reasons why customers are happy or dissatisfied with a product. and also maybe do Geospatial analysis to figure out where the majority of orders for a specific product are coming from etc. 
-
-

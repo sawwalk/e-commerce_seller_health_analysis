@@ -8,6 +8,13 @@ Context: A mid-sized e-commerce marketplace wants to improve customer satisfacti
 
 
 
+Questions I should be asking:
+
+* What questions should I be asking?
+* What do execs and stake holders care about?
+
+
+
 **Business Objective**
 
 
@@ -124,13 +131,13 @@ e.g., “A 1-day delay increases likelihood of negative review by 15%, reducing 
 
 
 
-### Analysis: 
+### Analysis:
 
 The top contributing states in terms of revenue and order volume are:
 
 
 
-revenue: 
+revenue:
 
 "SP"
 
@@ -146,7 +153,7 @@ revenue:
 
 the sales in these states combined makes up 78% of total revenue and 81% of total order volume.
 
-SP dominates the sales and revenue categories. 
+SP dominates the sales and revenue categories.
 
 
 
