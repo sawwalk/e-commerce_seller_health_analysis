@@ -48,6 +48,18 @@ WHERE order_delivered_customer_date IS NULL
 GROUP BY order_status
 ORDER BY order_count DESC;
 
+
+-- Check for orders with delivery timestamp but status is not delivered. 
+SELECT 
+	order_id,
+	order_status, 
+	order_delivered_customer_date, 
+	order_estimated_delivery_date
+FROM orders
+    WHERE order_status <> 'delivered'
+      AND order_delivered_customer_date IS NOT NULL;
+
+
 -- Full order status distribution
 SELECT
     order_status,
@@ -88,19 +100,6 @@ WHERE review_comment_message IS NOT NULL
 LIMIT 5;
 
 
--- Every order_item should have a matching order
-SELECT COUNT(*) AS items_without_orders
-FROM order_items oi
-LEFT JOIN orders o ON oi.order_id = o.order_id
-WHERE o.order_id IS NULL;
-
--- Every order should have a matching customer
-SELECT COUNT(*) AS orders_without_customers
-FROM orders o
-LEFT JOIN customers c ON o.customer_id = c.customer_id
-WHERE c.customer_id IS NULL;
---Both of the above queries should return 0
-
 
 -- ============================================
 -- Critical column null checks for seller
@@ -137,34 +136,48 @@ SELECT
 FROM order_items;
 
 
+
 -- ============================================
 -- Join health checks between critical tables
 -- for seller health scoring:
 -- order_reviews, order_items, orders
 -- ============================================
 
--- 1. Reviews with no matching order in orders table
+-- Every order_item should have a matching order
+SELECT COUNT(*) AS items_without_orders
+FROM order_items oi
+LEFT JOIN orders o ON oi.order_id = o.order_id
+WHERE o.order_id IS NULL;
+
+-- Every order should have a matching customer
+SELECT COUNT(*) AS orders_without_customers
+FROM orders o
+LEFT JOIN customers c ON o.customer_id = c.customer_id
+WHERE c.customer_id IS NULL;
+-- Both of the above queries should return 0
+
+-- Reviews with no matching order in orders table
 -- These reviews are not attributed to a valid order.
 SELECT COUNT(*) AS reviews_without_orders
 FROM order_reviews r
 LEFT JOIN orders o ON r.order_id = o.order_id
 WHERE o.order_id IS NULL;
 
--- 2. Reviews with no matching order_items row
+-- Reviews with no matching order_items row
 -- These review scores cannot be attributed to any seller
 SELECT COUNT(*) AS reviews_without_seller
 FROM order_reviews r
 LEFT JOIN order_items oi ON r.order_id = oi.order_id
 WHERE oi.order_id IS NULL;
 
--- 3. Orders with no matching order_items rows
+-- Orders with no matching order_items rows
 -- These orders have no seller attribution at all
 SELECT COUNT(*) AS orders_without_items
 FROM orders o
 LEFT JOIN order_items oi ON o.order_id = oi.order_id
 WHERE oi.order_id IS NULL;
 
--- 4. Orders with items but no review
+-- Orders with items but no review
 -- Expected to be common -- quantifies how many
 -- seller transactions have no satisfaction signal
 SELECT COUNT(DISTINCT o.order_id) AS orders_without_reviews
@@ -172,10 +185,11 @@ FROM orders o
 LEFT JOIN order_reviews r ON o.order_id = r.order_id
 WHERE r.order_id IS NULL;
 
--- 5. The full chain -- orders with both items AND reviews
+-- The full chain -- orders with both items AND reviews
 -- This is your actual analytical universe for
 -- seller health scoring
 SELECT COUNT(DISTINCT o.order_id) AS orders_with_full_chain
 FROM orders o
 INNER JOIN order_items oi ON o.order_id = oi.order_id
 INNER JOIN order_reviews r ON o.order_id = r.order_id;
+ 
