@@ -1,0 +1,187 @@
+rank,seller_id,seller_state,seller_city,total_orders,health_score,tier,avg_review_score,late_order_rate,pct_one_star,avg_actual_delivery_days,dominant_category,intervention_priority,total_negative_reviews,total_categorised,delivery_comms_compound,extreme_late_flag,compound_failure,low_review_coverage,boundary_case_flag,flag_return_refund
+1,b1b3948701c5c72445495bd161b83a4c,SP,sao paulo,14,0.1938610662358639,🔴 At Risk,1.929,64.29,71.43,23.4,Non-Delivery,1 — Immediate (Delivery+Comms),8,4,1,0,0,0,0,0
+2,54965bbe3e4f07ae045b90b0b8541f52,PR,foz do iguacu,73,1.1510500807754454,🔴 At Risk,3.145,30.14,36.23,26.17,Delivery Delay,1 — Immediate (Delivery+Comms),25,18,1,1,0,0,0,0
+3,26e2c91ef821e1ff8985f408788fe35b,SP,ibitinga,12,1.3222940226171236,🔴 At Risk,3.0,41.67,25.0,26.22,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),4,3,1,1,0,0,0,0
+4,2a1348e9addc1af5aaa619b1a3679d6b,MG,belo horizonte,48,1.4894991922455567,🔴 At Risk,3.17,27.08,34.04,27.31,Mixed — Non-Delivery/Product Quality,1 — Immediate (Delivery+Comms),13,9,1,1,0,0,0,0
+5,ad781527c93d00d89a11eecd9dcad7c1,SP,sao jose do rio preto,38,2.1841680129240704,🔴 At Risk,3.342,31.58,26.32,25.5,Non-Delivery,1 — Immediate (Delivery+Comms),11,8,1,0,0,0,0,1
+6,835f0f7810c76831d6c7d24c7a646d4d,SP,sao paulo,42,2.4071082390953182,🔴 At Risk,3.357,30.95,28.57,18.1,Non-Delivery,1 — Immediate (Delivery+Comms),12,7,1,0,0,0,0,1
+7,1ca7077d890b907f89be8c954a02686a,SP,santana de parnaiba,108,2.5605815831987098,🔴 At Risk,2.393,22.22,52.34,15.54,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),61,31,1,0,0,0,0,9
+8,821fb029fc6e495ca4f08a35d51e53a5,SP,sao paulo,24,3.105008077544424,🔴 At Risk,3.478,37.5,30.43,16.79,Non-Delivery,1 — Immediate (Delivery+Comms),5,3,1,0,0,0,0,2
+9,d9e7e7778b32987280a6f2cb9a39c57d,SP,sao paulo,11,3.588852988691438,🔴 At Risk,3.545,36.36,27.27,18.47,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),3,2,1,0,0,1,0,0
+10,5bc55dbe2f12b6af6d83ed46023e0dc8,MG,coronel fabriciano,17,3.7722132471728624,🔴 At Risk,2.412,23.53,47.06,13.93,Non-Delivery,1 — Immediate (Delivery+Comms),10,7,1,0,0,0,0,0
+11,7fc87cc3e89b3d1d5cabdca32f8485aa,SP,guarulhos,14,3.894991922455573,🔴 At Risk,3.571,28.57,28.57,19.74,Non-Delivery,1 — Immediate (Delivery+Comms),4,3,1,0,0,0,0,0
+12,602044f2c16190c2c6e45eb35c2e21cb,SP,ibitinga,49,4.707592891760905,🔴 At Risk,3.271,20.41,27.08,14.92,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),13,8,1,0,0,0,0,2
+13,c60b801f2d52c7f7f91de00870882a75,SP,guarulhos,39,4.7641357027463656,🔴 At Risk,3.436,20.51,28.21,16.1,Mixed — Non-Delivery/Wrong Product,1 — Immediate (Delivery+Comms),11,6,1,0,0,0,0,2
+14,88460e8ebdecbfecb5f9601833981930,PR,maringa,249,4.896607431340871,🔴 At Risk,3.431,19.28,26.61,17.83,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),65,38,1,1,0,0,0,10
+15,2eb70248d66e0e3ef83659f71b244378,SP,campinas,188,5.474151857835217,🔴 At Risk,2.789,13.83,36.76,18.02,Wrong Product,1 — Immediate (Delivery+Comms),80,51,1,0,0,0,0,9
+16,ef990a83bbea832f36ebe81376335aa8,SC,joinville,43,5.698707592891764,🔴 At Risk,3.628,25.58,23.26,16.92,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),9,5,1,0,0,0,0,2
+17,0b35c634521043bf4b47e21547b99ab5,PR,teixeira soares,50,6.132471728594509,🔴 At Risk,3.408,16.0,24.49,19.27,Delivery Delay,1 — Immediate (Delivery+Comms),14,10,1,1,0,0,0,0
+18,bbad7e518d7af88a0897397ffdca1979,SP,sao paulo,68,7.046849757673669,🔴 At Risk,3.179,16.18,34.33,13.46,Non-Delivery,1 — Immediate (Delivery+Comms),20,11,1,0,0,0,0,2
+19,6fd52c528dcb38be2eea044946b811f8,SP,sao paulo,67,7.172859450726977,🔴 At Risk,3.394,13.43,27.27,21.56,Mixed — Non-Delivery/Product Quality,1 — Immediate (Delivery+Comms),20,12,1,0,0,0,0,3
+20,5058e8c1e82653974541e83690655b4a,SP,itaquaquecetuba,62,7.394184168012924,🔴 At Risk,3.246,12.9,22.95,26.68,Delivery Delay,1 — Immediate (Delivery+Comms),13,8,1,1,0,0,0,2
+21,082e0bf4cb865a6533b1e8e498cc0255,SP,botucatu,11,7.74151857835218,🔴 At Risk,3.273,18.18,18.18,14.37,Poor Communication,1 — Immediate (Delivery+Comms),4,2,1,0,0,1,0,1
+22,972d0f9cf61b499a4812cf0bfa3ad3c4,SC,brusque,81,7.969305331179322,🔴 At Risk,3.025,11.11,32.91,18.19,Mixed — Delivery Delay/Wrong Product,1 — Immediate (Delivery+Comms),24,6,1,0,0,0,0,0
+23,6039e27294dc75811c0d8a39069f52c0,SP,osasco,63,8.470113085621973,🔴 At Risk,3.73,22.22,17.46,17.99,Mixed — Non-Delivery/Poor Communication,1 — Immediate (Delivery+Comms),8,6,1,0,0,0,0,0
+24,099095b050cfe8eb1ddff5317587e96e,SP,sao paulo,16,9.018578352180937,🔴 At Risk,3.375,18.75,31.25,11.33,Mixed — Non-Delivery/Poor Communication,1 — Immediate (Delivery+Comms),5,5,1,0,1,0,0,0
+25,b2479f944e1b90cf8a5de1bbfde284d6,SP,ibitinga,103,9.07269789983845,🔴 At Risk,3.48,13.59,24.51,15.3,Non-Delivery,1 — Immediate (Delivery+Comms),23,14,1,0,0,0,0,0
+26,e99e927c81e3f51739c94fcdfca9f10f,MG,uberlandia,21,9.624394184168011,🔴 At Risk,3.714,19.05,19.05,14.58,Non-Delivery,1 — Immediate (Delivery+Comms),4,3,1,0,0,0,0,0
+27,070d165398b553f3b4b851c216b8a358,SP,sao paulo,31,9.848142164781905,🔴 At Risk,3.367,16.13,26.67,12.1,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),8,7,1,0,0,0,0,0
+28,0bf0150d5b9d60d9cd2906003332f085,SP,sao paulo,39,10.888529886914377,🔴 At Risk,3.789,20.51,18.42,14.15,Non-Delivery,1 — Immediate (Delivery+Comms),6,5,1,0,0,0,0,0
+29,850913d59ce317156b00f3705f1c3edb,SP,atibaia,29,11.326332794830371,🔴 At Risk,3.586,17.24,17.24,13.54,Non-Delivery,1 — Immediate (Delivery+Comms),8,5,1,0,0,0,0,0
+30,431af27f296bc6519d890aa5a05fdb11,SP,ribeirao preto,116,11.675282714054926,🔴 At Risk,3.8,15.52,18.26,17.23,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),18,12,1,1,0,0,0,0
+31,7c67e1448b00f6e969d365cea6b010ab,SP,itaquaquecetuba,976,12.148626817447498,🔴 At Risk,3.495,10.14,19.79,22.36,Non-Delivery,1 — Immediate (Delivery+Comms),195,108,1,1,0,0,0,16
+32,3c03b12bab54d8b37d79d914bfdb1aa0,RJ,sao joao de meriti,37,13.936995153473347,🔴 At Risk,3.833,16.22,19.44,13.62,Non-Delivery,1 — Immediate (Delivery+Comms),6,3,1,1,0,0,0,1
+33,82e0a475a88cc9595229d8029273f045,SP,sao paulo,43,14.120355411954767,🔴 At Risk,3.581,9.3,25.58,15.86,Non-Delivery,1 — Immediate (Delivery+Comms),10,6,1,1,0,0,0,0
+34,af4a0e4cfe1d9c26b6712b1be25a72e5,MG,mateus leme,21,14.321486268174477,🔴 At Risk,3.429,9.52,33.33,13.36,Non-Delivery,1 — Immediate (Delivery+Comms),8,4,1,0,0,0,0,0
+35,897060da8b9a21f655304d50fd935913,SP,ribeirao preto,305,14.390953150242328,🔴 At Risk,3.709,11.8,17.88,14.92,Non-Delivery,1 — Immediate (Delivery+Comms),59,37,1,1,0,0,0,4
+36,1835b56ce799e6a4dc4eddc053f04066,SP,ibitinga,418,14.843295638126008,🔴 At Risk,3.663,11.72,20.0,13.22,Non-Delivery,1 — Immediate (Delivery+Comms),68,43,1,1,0,0,0,2
+37,d3f39f05462b79a4562d35893a28f159,SP,mococa,33,15.141357027463652,🔴 At Risk,3.606,12.12,21.21,11.97,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),6,3,1,0,0,0,0,0
+38,11bfa66332777660bd0640ee84d47006,SP,ribeirao preto,77,15.269789983844907,🔴 At Risk,3.883,15.58,15.58,16.65,Non-Delivery,1 — Immediate (Delivery+Comms),13,12,1,1,0,0,0,0
+39,e96498ed8daaa3e9c23f7a62da76591c,SP,sao paulo,34,15.849757673667206,🔴 At Risk,3.941,14.71,20.59,15.2,Non-Delivery,1 — Immediate (Delivery+Comms),5,4,1,0,0,0,0,0
+40,855668e0971d4dfd7bef1b6a4133b41b,SP,itatiba,300,16.081583198707595,🔴 At Risk,3.855,14.0,14.53,16.26,Delivery Delay,1 — Immediate (Delivery+Comms),47,35,1,1,0,0,0,7
+41,e2aee0892199b1d92530e371abd825bf,PR,rolandia,36,16.235056542810987,🔴 At Risk,3.889,13.89,16.67,15.51,Non-Delivery,1 — Immediate (Delivery+Comms),5,5,1,0,0,0,0,0
+42,52f0fe436a347ddad7ed5f9aa4e27eaa,SP,sao paulo,19,16.925686591276246,🔴 At Risk,3.737,15.79,10.53,14.94,Non-Delivery,1 — Immediate (Delivery+Comms),4,2,1,0,0,1,0,0
+43,fffd5413c0700ac820c7069d66d98c89,SP,amparo,57,17.283521809369947,🔴 At Risk,3.893,14.04,17.86,13.79,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),10,8,1,0,0,0,0,0
+44,e5a3438891c0bfdb9394643f95273d8e,SP,limeira,217,17.508885298869146,🔴 At Risk,3.991,18.43,14.81,15.68,Non-Delivery,1 — Immediate (Delivery+Comms),26,20,1,1,0,0,0,1
+45,165fc07beebdcb6190fba8a06db2a449,PR,maringa,50,17.534733441033925,🔴 At Risk,3.8,12.0,18.0,12.98,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),10,5,1,0,0,0,0,1
+46,70a12e78e608ac31179aea7f8422044b,SP,jacarei,312,18.745557350565427,🔴 At Risk,3.813,10.9,14.52,14.71,Non-Delivery,1 — Immediate (Delivery+Comms),44,26,1,0,0,0,0,5
+47,06a2c3af7b3aee5d69171b0e14f0ee87,MA,sao luis,389,18.79402261712439,🔴 At Risk,4.013,23.14,13.25,17.73,Non-Delivery,1 — Immediate (Delivery+Comms),44,30,1,0,0,0,0,2
+48,522620dcb18a6b31cd7bdf73665113a9,PR,cascavel,172,19.495961227786758,🔴 At Risk,3.905,10.47,17.75,15.4,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),29,20,1,0,0,0,0,3
+49,7ad32824caee82087b3e2e5f33b1bf32,SP,ibitinga,147,19.63085621970921,🔴 At Risk,3.861,14.29,14.58,12.12,Non-Delivery,1 — Immediate (Delivery+Comms),26,20,1,0,0,0,1,0
+50,5b179e9e8cc7ab6fd113a46ca584da81,SP,sao paulo,34,20.070274636510504,🔴 At Risk,3.667,8.82,18.18,13.01,Mixed — Delivery Delay/Poor Communication,1 — Immediate (Delivery+Comms),5,2,1,0,0,1,0,0
+51,dd533b429f380718b70ad9922c294bae,SP,barretos,39,20.17124394184168,🔴 At Risk,3.923,12.82,12.82,17.28,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),5,2,1,0,0,1,0,1
+52,4a3ca9315b744ce9f8e9374361493884,SP,ibitinga,1782,20.425686591276254,🔴 At Risk,3.852,11.0,13.73,14.48,Non-Delivery,1 — Immediate (Delivery+Comms),259,133,1,1,0,0,0,16
+53,244c2f1bff6afe1f2eaf9bfe9b2aed38,SP,mogi das cruzes,25,20.642164781906303,🔴 At Risk,3.68,8.0,16.0,14.65,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),5,4,1,0,0,0,0,0
+54,f3da5b2ff499efb8d4a6d371d175d7dd,SP,sao paulo,78,20.923263327948305,🔴 At Risk,3.896,14.1,15.58,11.52,Non-Delivery,1 — Immediate (Delivery+Comms),9,8,1,1,0,0,1,1
+55,cd68562d3f44870c08922d380acae552,SP,ribeirao preto,122,21.201130856219716,🔴 At Risk,4.017,18.03,12.4,16.26,Non-Delivery,1 — Immediate (Delivery+Comms),15,8,1,0,0,0,0,1
+56,c31eff8334d6b3047ed34bebd4d62c36,SP,salto,120,21.890953150242325,🔴 At Risk,3.874,14.17,11.76,12.67,Non-Delivery,1 — Immediate (Delivery+Comms),16,5,1,0,0,0,1,1
+57,7040e82f899a04d1b434b795a43b4617,SP,sao paulo,208,22.233441033925693,🔴 At Risk,3.65,9.62,16.02,10.51,Product Quality,1 — Immediate (Delivery+Comms),37,20,1,0,0,0,1,4
+58,1900267e848ceeba8fa32d80c1a5f5a8,SP,ibitinga,408,22.63651050080776,🔴 At Risk,3.863,10.29,14.21,13.14,Non-Delivery,1 — Immediate (Delivery+Comms),58,32,1,0,0,0,1,7
+59,710e3548e02bc1d2831dfc4f1b5b14d4,PR,rolandia,131,22.69547657512116,🔴 At Risk,3.431,4.58,26.92,14.5,Wrong Product,1 — Immediate (Delivery+Comms),36,19,1,0,0,0,0,3
+60,213b25e6f54661939f11710a6fddb871,SP,salto,152,22.854604200323102,🔴 At Risk,3.815,8.55,13.91,15.24,Mixed — Delivery Delay/Non-Delivery,1 — Immediate (Delivery+Comms),22,18,1,0,0,0,0,1
+61,1da366cade6d8276e7d8beea7af5d4bf,MG,uba,42,22.93214862681745,🔴 At Risk,3.976,11.9,12.2,17.47,Non-Delivery,1 — Immediate (Delivery+Comms),5,3,1,0,0,0,1,0
+62,02d35243ea2e497335cd0f076b45675d,RN,natal,14,0.4369951534733466,🔴 At Risk,2.643,35.71,42.86,26.17,Delivery Delay,2 — Logistics Intervention,4,3,0,0,0,0,0,0
+63,cb41bfbcbda0aea354a834ab222f9a59,SP,sao paulo,11,1.6381260096930546,🔴 At Risk,3.273,36.36,27.27,37.56,Delivery Delay,2 — Logistics Intervention,3,2,0,1,0,1,0,0
+64,b19f3ca2ea475913750f25a5c37c8d8f,MG,divinopolis,19,1.7722132471728589,🔴 At Risk,3.263,31.58,31.58,18.39,Non-Delivery,2 — Logistics Intervention,4,4,0,0,0,0,0,1
+65,a49928bcdf77c55c6d6e05e09a9b4ca5,SP,sao paulo,96,2.1542810985460448,🔴 At Risk,3.031,26.04,34.38,16.93,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,31,19,0,0,0,0,0,2
+66,c37b2059d4f90d4feead554e5246565e,SP,sao paulo,12,2.7786752827140546,🔴 At Risk,3.333,25.0,33.33,17.34,Non-Delivery,2 — Logistics Intervention,5,4,0,0,0,0,0,2
+67,054694fa03fe82cec4b7551487331d74,SP,itajobi,20,2.8715670436187355,🔴 At Risk,3.4,30.0,25.0,30.79,Non-Delivery,2 — Logistics Intervention,3,1,0,1,0,1,0,0
+68,d32e3909cfb714fb2a6cb092c85b9c5f,SP,jundiai,10,3.058158319870756,🔴 At Risk,3.5,30.0,30.0,22.51,Delivery Delay,2 — Logistics Intervention,2,2,0,0,1,1,0,0
+69,1dfe5347016252a7884b694d4f10f5c4,SP,ibitinga,20,3.109854604200322,🔴 At Risk,3.4,25.0,30.0,18.91,Non-Delivery,2 — Logistics Intervention,6,3,0,0,0,0,0,0
+70,ecccfa2bb93b34a3bf033cc5d1dcdc69,PR,curitiba,12,3.193053311793215,🔴 At Risk,2.833,16.67,41.67,32.12,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,5,3,0,1,0,0,0,0
+71,4e5725ba188db8252977a4f0227bd462,SP,ribeirao preto,21,3.4507269789983828,🔴 At Risk,3.524,28.57,28.57,20.97,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,6,3,0,1,0,0,0,1
+72,91f0eec23d4a61d7d7caeefa3f0ad1ca,SC,tubarao,11,3.730210016155088,🔴 At Risk,3.545,27.27,27.27,26.14,Non-Delivery,2 — Logistics Intervention,1,1,0,1,0,1,0,0
+73,e64d65bc8dbec2accda90c58de5d1246,SP,rio claro,12,3.7665589660743097,🔴 At Risk,3.083,33.33,41.67,13.49,Non-Delivery,2 — Logistics Intervention,5,5,0,0,0,0,0,0
+74,5f67c6082caacb26e431a7b17940cece,PR,maringa,13,3.96930533117932,🔴 At Risk,3.538,30.77,23.08,22.83,Delivery Delay,2 — Logistics Intervention,2,2,0,0,0,1,0,0
+75,712e6ed8aa4aa1fa65dab41fed5737e4,SC,videira,77,3.974151857835218,🔴 At Risk,3.395,22.08,22.37,24.69,Delivery Delay,2 — Logistics Intervention,23,13,0,1,0,0,0,1
+76,ede0c03645598cdfc63ca8237acbe73d,SP,ribeirao preto,43,4.1542810985460425,🔴 At Risk,3.571,34.88,23.81,18.59,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,8,6,0,0,0,0,0,0
+77,cb5df0dcb9e280b1780e9d589889f2c7,SP,bady bassitt,11,4.222940226171244,🔴 At Risk,3.4,18.18,30.0,21.57,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,3,2,0,0,0,1,0,1
+78,86bb7c4b535e49a541baf3266b1c95b1,SP,franca,16,4.693861066235861,🔴 At Risk,3.2,18.75,20.0,20.14,Delivery Delay,2 — Logistics Intervention,5,4,0,1,0,0,0,0
+79,cac4c8e7b1ca6252d8f20b2fc1a2e4af,SP,indaiatuba,75,4.74151857835218,🔴 At Risk,3.568,24.0,25.68,18.27,Non-Delivery,2 — Logistics Intervention,14,8,0,1,0,0,0,2
+80,f76a3b1349b6df1ee875d1f3fa4340f0,SP,sao paulo,24,5.88206785137318,🔴 At Risk,3.458,37.5,16.67,17.02,Non-Delivery,2 — Logistics Intervention,3,1,0,0,0,1,0,1
+81,e0878efa0e0b7e5313ac0b43bc04c081,PR,curitiba,26,7.359450726979,🔴 At Risk,3.615,19.23,19.23,18.13,Mixed — Non-Delivery/Product Quality,2 — Logistics Intervention,7,6,0,1,0,0,0,1
+82,f08c008c8a8d31417763738a1788a2a8,PR,santa terezinha de itaipu,20,7.407915993537966,🔴 At Risk,3.421,15.0,21.05,19.36,Non-Delivery,2 — Logistics Intervention,4,2,0,1,0,1,0,0
+83,7f152321c60a266edc53af1925ef96c1,SC,criciuma,20,7.438610662358637,🔴 At Risk,3.8,30.0,20.0,23.47,Non-Delivery,2 — Logistics Intervention,5,3,0,1,0,0,0,1
+84,0725b8c0f3f906e58f70cbe76b7c748c,SP,guarulhos,17,8.113893376413573,🔴 At Risk,3.647,35.29,23.53,12.93,Non-Delivery,2 — Logistics Intervention,4,4,0,0,0,0,0,0
+85,2aa3443d7bf9d9bb11133f420d75e083,RJ,rio de janeiro,10,8.392568659127628,🔴 At Risk,3.0,20.0,40.0,10.57,Mixed — Delivery Delay/Wrong Product,2 — Logistics Intervention,3,1,0,0,0,1,0,3
+86,a6bd7d1ccdac48c6b33b28596b7eb122,PB,mamanguape,15,8.529886914378029,🔴 At Risk,3.5,13.33,35.71,15.62,Delivery Delay,2 — Logistics Intervention,5,3,0,0,0,0,0,0
+87,8e6d7754bc7e0f22c96d255ebda59eba,SP,sao jose dos campos,85,8.579967689822293,🔴 At Risk,3.612,17.65,20.0,15.28,Non-Delivery,2 — Logistics Intervention,17,8,0,1,0,0,0,3
+88,7586919161935337bf6b6d7ff5779648,RJ,rio de janeiro,11,8.974151857835217,🔴 At Risk,3.818,18.18,27.27,17.5,Delivery Delay,2 — Logistics Intervention,2,1,0,1,0,1,0,1
+89,615005a3ef192c00c6f0e977cee3d2bc,SP,itu,10,9.60420032310178,🔴 At Risk,3.8,20.0,30.0,13.93,Delivery Delay,2 — Logistics Intervention,2,1,0,0,0,1,0,0
+90,c4fb51fb1c5b7c07bc5e67be6e7e8f6e,PR,curitiba,15,10.013731825525042,🔴 At Risk,3.533,13.33,20.0,16.63,Delivery Delay,2 — Logistics Intervention,3,3,0,0,0,0,0,0
+91,0417b067eeab773d2f7061a726dc477f,SC,sao bento do sul,13,10.2859450726979,🔴 At Risk,3.923,30.77,23.08,17.56,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,0
+92,ff69aa92bb6b1bf9b8b7a51c2ed9cf8b,SP,sao paulo,20,10.36672051696284,🔴 At Risk,3.65,25.0,25.0,11.46,Delivery Delay,2 — Logistics Intervention,6,3,0,0,0,0,0,0
+93,55bb6fe5bebe5012e2d7d9928e1128ff,SP,bauru,15,10.381260096930532,🔴 At Risk,3.467,13.33,20.0,15.0,Delivery Delay,2 — Logistics Intervention,3,1,0,0,0,1,0,0
+94,71039d19d4303bf9054d69e9a9236699,SP,sao paulo,35,10.603392568659125,🔴 At Risk,3.8,22.86,20.0,13.89,Non-Delivery,2 — Logistics Intervention,4,1,0,0,0,1,0,0
+95,4c8b8048e33af2bf94f2eb547746a916,SP,ibitinga,19,10.69870759289176,🔴 At Risk,3.368,10.53,21.05,18.61,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,5,2,0,1,0,1,0,1
+96,cee48807215b30a12ca2ca10ffb5f250,SP,guaruja,39,10.970920840064624,🔴 At Risk,3.769,15.38,17.95,23.63,Non-Delivery,2 — Logistics Intervention,7,3,0,0,0,0,0,0
+97,d20b021d3efdf267a402c402a48ea64b,SP,ibitinga,86,11.004038772213246,🔴 At Risk,3.753,17.44,16.47,16.99,Non-Delivery,2 — Logistics Intervention,11,9,0,1,0,0,0,1
+98,e504a4e2efaa45cbff7e268a2c58c956,SP,sao pedro,10,11.041195476575115,🔴 At Risk,3.8,30.0,20.0,12.95,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,0
+99,2a261b5b644fa05f4f2700eb93544f2c,SP,porto ferreira,52,11.129240710823913,🔴 At Risk,3.827,21.15,19.23,14.59,Non-Delivery,2 — Logistics Intervention,6,3,0,0,0,0,0,1
+100,c6a7539d424a8402232c2228d7a03c5e,SP,sao paulo,10,11.30452342487884,🔴 At Risk,3.1,10.0,40.0,14.27,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,4,4,0,0,0,0,0,0
+101,f593898ec748b7a8cb81fc04edafd98a,SP,pedreira,19,11.35379644588045,🔴 At Risk,3.684,15.79,15.79,16.62,Mixed — Non-Delivery/Product Quality,2 — Logistics Intervention,3,2,0,0,0,1,0,0
+102,39c763cca83e654764b7a4a650fb9b7c,GO,goiania,11,11.365105008077544,🔴 At Risk,3.818,18.18,27.27,13.49,Mixed — Non-Delivery/Wrong Product,2 — Logistics Intervention,2,2,0,0,0,1,0,1
+103,218f991754f360af9c2daa5e0b8e990c,SP,sao paulo,14,11.38449111470113,🔴 At Risk,3.643,14.29,21.43,13.86,Mixed — Non-Delivery/Poor Packaging,2 — Logistics Intervention,2,2,0,0,0,1,0,1
+104,ea566164622c6b439516ab18062c42cd,SP,sao  paulo,50,11.934571890145396,🔴 At Risk,3.78,22.0,16.0,14.03,Non-Delivery,2 — Logistics Intervention,10,5,0,0,0,0,0,1
+105,6973a06f484aacf400ece213dbf3d946,SP,sao jose dos campos,91,12.013731825525038,🔴 At Risk,3.744,17.58,15.56,15.18,Non-Delivery,2 — Logistics Intervention,15,10,0,0,0,0,0,1
+106,89bc797e2e29667aa035d4368f9b7f92,SP,sao paulo,16,12.401453957996768,🔴 At Risk,3.875,18.75,18.75,15.39,Mixed — Delivery Delay/Product Quality,2 — Logistics Intervention,2,2,0,0,0,1,0,0
+107,be8e909810184b9b19e886129149d8e5,SP,piracicaba,15,12.43053311793215,🔴 At Risk,3.733,20.0,13.33,15.36,Non-Delivery,2 — Logistics Intervention,3,3,0,0,0,0,0,0
+108,00720abe85ba0859807595bbf045a33b,SP,guarulhos,13,12.78675282714055,🔴 At Risk,3.615,15.38,23.08,11.79,Non-Delivery,2 — Logistics Intervention,3,1,0,0,0,1,0,0
+109,66fd84ee7528c0c0de85d0f44a73d5ab,RS,campina das missoes,11,13.12681744749596,🔴 At Risk,3.364,9.09,27.27,15.41,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,0
+110,40db9e9aa57f7bb151bcda6b0f9bdbb7,PE,recife,12,13.216478190630047,🔴 At Risk,2.364,8.33,54.55,14.78,Non-Delivery,2 — Logistics Intervention,7,3,0,0,0,0,0,0
+111,610f72e407cdd7caaa2f8167b0163fd8,SP,sao paulo,16,13.608239095315025,🔴 At Risk,3.625,12.5,25.0,12.7,Mixed — Non-Delivery/Wrong Product,2 — Logistics Intervention,3,1,0,0,0,1,0,0
+112,f918546be4bec7104d117789ba758b2b,SP,sao paulo,20,13.99273021001616,🔴 At Risk,3.85,20.0,20.0,12.36,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,0
+113,2089a6d640999f9b9141ac719b2af596,SP,sao carlos,41,14.620355411954764,🔴 At Risk,3.927,14.63,19.51,19.53,Delivery Delay,2 — Logistics Intervention,8,5,0,0,0,0,0,1
+114,3a1a1fec38dd360f15fc912e821e169d,SP,sao paulo,15,14.877221324717285,🔴 At Risk,3.867,26.67,13.33,14.43,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,2,2,0,0,0,1,0,0
+115,014c0679dd340a0e338872e7ec85666a,MG,timoteo,14,15.380452342487883,🔴 At Risk,3.857,14.29,14.29,19.76,Non-Delivery,2 — Logistics Intervention,2,2,0,0,0,1,0,0
+116,2d50d6282f8aa2257819a77bfaa0efe0,SP,ibitinga,42,15.600969305331182,🔴 At Risk,3.81,14.29,16.67,13.65,Mixed — Non-Delivery/Product Quality,2 — Logistics Intervention,8,5,0,0,0,0,0,0
+117,02dcd3e8e25bee036e32512bcf175493,MG,contagem,13,15.689822294022616,🔴 At Risk,4.077,30.77,23.08,17.09,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,0
+118,beadbee30901a7f61d031b6b686095ad,SP,guarulhos,64,15.873990306946688,🔴 At Risk,3.906,25.0,14.06,14.1,Delivery Delay,2 — Logistics Intervention,9,6,0,0,0,0,0,0
+119,bc47d5d1490df2b36add65d733eafaba,SP,santo andre,21,16.178513731825525,🔴 At Risk,3.524,9.52,23.81,12.85,Non-Delivery,2 — Logistics Intervention,3,1,0,0,0,1,0,0
+120,e89c4adbe7b1d0819dbb636e16461cf1,SP,indaiatuba,24,16.28836833602585,🔴 At Risk,3.833,12.5,16.67,15.12,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,3,2,0,0,0,1,0,0
+121,3fd1e727ba94cfe122d165e176ce7967,SP,araraquara,35,16.34814216478191,🔴 At Risk,3.943,20.0,14.29,15.71,Delivery Delay,2 — Logistics Intervention,3,1,0,0,0,1,0,0
+122,b14db04aa7881970e83ffa9426897925,SP,sorocaba,78,16.4967689822294,🔴 At Risk,3.773,11.54,14.67,16.02,Non-Delivery,2 — Logistics Intervention,9,4,0,0,0,0,0,1
+123,dd7ddc04e1b6c2c614352b383efe2d36,SP,sao paulo,121,16.743134087237483,🔴 At Risk,3.875,15.7,14.17,15.02,Non-Delivery,2 — Logistics Intervention,17,13,0,0,0,0,0,1
+124,45213867cefbf2cd4c6177e10216a951,SP,araras,14,16.826332794830375,🔴 At Risk,3.857,14.29,14.29,14.92,Non-Delivery,2 — Logistics Intervention,3,3,0,0,0,0,0,0
+125,a7f13822ceb966b076af67121f87b063,SP,itaquaquecetuba,73,16.83360258481422,🔴 At Risk,3.403,6.85,22.22,22.71,Non-Delivery,2 — Logistics Intervention,17,4,0,1,0,0,0,4
+126,87b740daf17b5d1be335a64164ec6842,SP,suzano,11,16.849757673667206,🔴 At Risk,3.727,9.09,18.18,18.17,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,1
+127,198c7ea11960a9844b544d9bcdca860c,MG,jacutinga,25,16.885298869143778,🔴 At Risk,3.88,12.0,20.0,14.51,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,3,3,0,0,0,0,0,0
+128,d93919c944be9cff128f6c9cb899eacb,SP,mombuca,33,17.065428109854604,🔴 At Risk,4.0,18.18,15.15,22.92,Non-Delivery,2 — Logistics Intervention,5,4,0,1,0,0,0,0
+129,f5f1f2c5f923f36ad79ea1d07185ddc9,SP,taruma,10,17.413570274636513,🔴 At Risk,3.7,10.0,20.0,13.05,Delivery Delay,2 — Logistics Intervention,1,1,0,0,0,1,0,0
+130,23613d49c3ac2bd302259e55c06c050c,SP,porto ferreira,69,17.47253634894992,🔴 At Risk,3.868,14.49,14.71,13.98,Non-Delivery,2 — Logistics Intervention,11,7,0,0,0,0,0,2
+131,b17b679f4f5ce2e03ce6968c62648246,SP,ribeirao preto,50,17.504038772213246,🔴 At Risk,3.98,18.0,14.0,19.23,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,5,2,0,0,0,1,0,0
+132,dd55f1bb788714a40e7954c3be6df745,SP,sao paulo,35,18.11308562197092,🔴 At Risk,3.743,17.14,8.57,18.3,Non-Delivery,2 — Logistics Intervention,3,2,0,1,0,1,0,0
+133,f46490624488d3ff7ce78613913a7711,SP,guarulhos,80,18.282714054927304,🔴 At Risk,3.763,12.5,21.25,10.25,Non-Delivery,2 — Logistics Intervention,18,8,0,0,0,0,1,0
+134,891071be6ba827b591264c90c2ae8a63,SP,sao paulo,85,18.436995153473344,🔴 At Risk,3.953,17.65,15.29,13.71,Non-Delivery,2 — Logistics Intervention,10,8,0,0,0,0,0,0
+135,8160255418d5aaa7dbdc9f4c64ebda44,SP,ibitinga,380,18.654281098546043,🔴 At Risk,3.955,16.58,13.56,16.25,Non-Delivery,2 — Logistics Intervention,51,36,0,1,0,0,0,2
+136,1ce3ae5a399804d1a87e706f8a813c3e,SC,jaguaruna,40,18.74071082390953,🔴 At Risk,3.75,10.0,15.0,14.51,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,4,3,0,0,0,0,0,0
+137,3b872fd4747f01cc56206f2934198618,SP,ibitinga,25,18.75040387722133,🔴 At Risk,3.88,16.0,12.0,14.49,Non-Delivery,2 — Logistics Intervention,4,2,0,0,0,1,0,0
+138,50c9975695009e5e6473912e83a6d1da,MG,claudio,50,18.777867528271408,🔴 At Risk,3.939,14.0,14.29,16.48,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,8,4,0,0,0,0,0,0
+139,b1fc4f64df5a0e8b6913ab38803c57a9,RJ,sao goncalo,107,18.79159935379645,🔴 At Risk,3.857,12.15,13.33,15.92,Non-Delivery,2 — Logistics Intervention,18,9,0,0,0,0,0,1
+140,977f9f63dd360c2a32ece2f93ad6d306,SP,tabatinga,23,18.80533117932149,🔴 At Risk,3.87,13.04,17.39,12.8,Non-Delivery,2 — Logistics Intervention,4,3,0,0,0,0,0,0
+141,99a54764c341d5dc80b4a8fac4eba3fb,SP,sao paulo,44,18.931340872374797,🔴 At Risk,3.674,20.45,13.95,7.73,Mixed — Delivery Delay/Product Quality,2 — Logistics Intervention,7,2,0,0,0,1,1,1
+142,04308b1ee57b6625f47df1d56f00eedf,SC,bombinhas,92,18.97495961227787,🔴 At Risk,3.946,11.96,16.3,18.88,Non-Delivery,2 — Logistics Intervention,14,10,0,1,0,0,0,1
+143,440dd6ab244315c632130ecfb63827b1,SP,votuporanga,91,18.987075928917605,🔴 At Risk,3.89,13.19,13.19,16.62,Non-Delivery,2 — Logistics Intervention,12,7,0,1,0,0,0,1
+144,abe42c5d03695b4257b5c6cbf4e6784e,RJ,rio de janeiro,49,18.995153473344104,🔴 At Risk,3.958,16.33,14.58,14.36,Mixed — Non-Delivery/Wrong Product,2 — Logistics Intervention,5,4,0,1,0,0,0,1
+145,e48cc16ab70bfa09e1401740dce0b3d7,SP,aracatuba,14,19.012116316639744,🔴 At Risk,3.571,7.14,21.43,14.69,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,3,2,0,0,0,1,0,0
+146,b33aaadd1a8891d2dfef0c4c3bdf0371,SP,limeira,16,19.126009693053312,🔴 At Risk,3.938,12.5,18.75,14.02,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,3,3,0,1,0,0,0,0
+147,002100f778ceb8431b7a1020ff7ab48f,SP,franca,50,19.167205169628435,🔴 At Risk,3.96,18.0,12.0,16.39,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,4,2,0,0,0,1,0,1
+148,a44fb5a447105f8469bdf16bf9159f25,RS,porto alegre,19,19.222940226171247,🔴 At Risk,4.053,26.32,15.79,14.24,Non-Delivery,2 — Logistics Intervention,2,1,0,0,0,1,0,1
+149,834f8533b2ecb6598dd004ff3de7203a,SP,sao paulo,41,19.29563812600969,🔴 At Risk,3.951,14.63,14.63,14.66,Non-Delivery,2 — Logistics Intervention,7,7,0,0,0,0,0,0
+150,7139dc5186aa238b006e066d8fbab2e4,SP,amparo,22,19.443457189014534,🔴 At Risk,4.0,13.64,19.05,14.81,Mixed — Delivery Delay/Product Quality,2 — Logistics Intervention,3,2,0,1,0,1,0,0
+151,d97df38225e5abadaff1e72cb72b823c,SP,sao caetano do sul,28,19.45395799676898,🔴 At Risk,3.926,17.86,14.81,12.15,Non-Delivery,2 — Logistics Intervention,6,2,0,0,0,1,1,0
+152,d101c6da914ae3d53f7bee42283f2fe2,SP,sao paulo,13,19.66801292407108,🔴 At Risk,3.615,7.69,23.08,13.33,Mixed — Non-Delivery/Product Quality,2 — Logistics Intervention,4,3,0,0,0,0,0,1
+153,5b0cc932433fa5184b5b94bfe6bcc256,SP,ibitinga,12,19.86429725363489,🔴 At Risk,3.583,25.0,8.33,11.84,Non-Delivery,2 — Logistics Intervention,1,1,0,0,0,1,1,0
+154,3771c85bac139d2344864ede5d9341e3,SP,sorocaba,26,19.9313408723748,🔴 At Risk,3.846,15.38,11.54,13.26,Non-Delivery,2 — Logistics Intervention,3,3,0,0,0,0,0,0
+155,bce6a5ecf98e99fd2a8868b15c51f04b,SP,guarulhos,14,20.923263327948305,🔴 At Risk,4.071,21.43,21.43,11.76,Non-Delivery,2 — Logistics Intervention,3,1,0,0,0,1,1,1
+156,99002261c568a84cce14d43fcffb43ea,MT,cuiaba,36,20.92891760904685,🔴 At Risk,3.722,8.33,13.89,16.84,Mixed — Non-Delivery/Product Quality,2 — Logistics Intervention,6,3,0,0,0,0,0,1
+157,1a932caad4f9d804097d7f8e615baed1,SP,sao paulo,20,20.937802907915994,🔴 At Risk,3.9,20.0,15.0,9.54,Delivery Delay,2 — Logistics Intervention,3,2,0,0,0,1,1,0
+158,f12ff17ad8bbf01ec5c33b17e506649b,SP,sao paulo,28,20.995961227786758,🔴 At Risk,3.857,10.71,14.29,13.79,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,4,3,0,0,0,0,0,0
+159,23a0ffca143a15b9b5bbdb7d552f626a,SP,sao pedro,23,21.54765751211632,🔴 At Risk,3.913,13.04,17.39,11.5,Mixed — Non-Delivery/Product Quality,2 — Logistics Intervention,4,2,0,0,0,1,1,0
+160,9c068d10aca38e85c50202e17b4a7e88,MS,coxim,17,21.56623586429725,🔴 At Risk,4.125,17.65,18.75,16.53,Mixed — Non-Delivery/Wrong Product,2 — Logistics Intervention,2,2,0,0,0,1,1,0
+161,49067458c68f7701fd334ce326accbe0,MG,juiz de fora,17,21.63731825525041,🔴 At Risk,3.353,5.88,29.41,12.2,Non-Delivery,2 — Logistics Intervention,6,2,0,0,0,1,1,0
+162,f7ccf836d21b2fb1de37564105216cc1,SP,ibitinga,69,21.856219709208403,🔴 At Risk,3.851,10.14,19.4,11.21,Mixed — Non-Delivery/Wrong Product,2 — Logistics Intervention,9,5,0,1,0,0,1,1
+163,8f54d64f28a993550aa7943f12572959,MG,ipatinga,15,22.254442649434573,🔴 At Risk,3.733,6.67,20.0,14.05,Mixed — Non-Delivery/Wrong Product,2 — Logistics Intervention,4,2,0,0,0,1,0,0
+164,bf84056e679dbe9c69929847a40e338f,SP,sao paulo,35,22.419224555735056,🔴 At Risk,3.771,8.57,17.14,12.68,Mixed — Delivery Delay/Non-Delivery,2 — Logistics Intervention,4,2,0,1,0,1,1,0
+165,eb4df17aed01d918c65f0f8d650900c0,SP,paulinia,11,22.454765751211635,🔴 At Risk,3.909,27.27,9.09,12.9,Delivery Delay,2 — Logistics Intervention,1,1,0,0,0,1,1,0
+166,4aba391bc3b88717ce08eb11e44937b2,BA,arraial d'ajuda (porto seguro),27,22.752827140549275,🔴 At Risk,4.0,14.81,11.11,16.92,Delivery Delay,2 — Logistics Intervention,4,3,0,1,0,0,1,0
+167,157c3e4b42f81ac4a44e8b1ca2fe9876,SP,sao paulo,23,22.939418416801296,🔴 At Risk,3.696,8.7,17.39,10.98,Non-Delivery,2 — Logistics Intervention,5,3,0,0,0,0,1,0
+168,ec4608a1f76453166bb312b2968aeaf4,SP,porto ferreira,17,4.400646203554123,🔴 At Risk,3.294,23.53,23.53,15.29,Product Quality,3 — Product Intervention,5,3,0,1,0,0,0,0
+169,d71d863e5ef30d94e440c11be17dcd8f,SP,osasco,23,7.130856219709208,🔴 At Risk,3.333,13.04,28.57,19.16,Wrong Product,3 — Product Intervention,7,4,0,0,0,0,0,0
+170,9d39404483343dd55c7ae254494d8388,SP,sao paulo,10,13.008885298869146,🔴 At Risk,3.5,10.0,30.0,14.39,Mixed — Product Quality/Wrong Product,3 — Product Intervention,2,2,0,0,0,1,0,0
+171,8444e55c1f13cd5c179851e5ca5ebd00,MG,congonhal,92,16.41518578352181,🔴 At Risk,3.37,6.52,28.26,21.08,Wrong Product,3 — Product Intervention,24,17,0,0,0,0,0,4
+172,db2956745b3a8e9f3785c99f34b5d25e,SP,sao sebastiao,45,18.89499192245557,🔴 At Risk,3.844,11.11,15.56,14.28,Product Quality,3 — Product Intervention,4,3,0,0,0,0,0,0
+173,75d34ebb1bd0bd7dde40dd507b8169c3,BA,salvador,57,19.12520193861066,🔴 At Risk,3.93,15.79,12.28,16.05,Product Quality,3 — Product Intervention,7,3,0,0,0,0,0,0
+174,dc8798cbf453b7e0f98745e396cc5616,SP,sao paulo,35,20.728594507269797,🔴 At Risk,3.371,5.71,28.57,13.46,Wrong Product,3 — Product Intervention,8,3,0,0,0,0,0,0
+175,0747d5bb69f0586cc869d8af4c50f93e,RJ,saquarema,12,21.108239095315025,🔴 At Risk,3.75,8.33,16.67,14.15,Mixed — Product Quality/Wrong Product,3 — Product Intervention,1,1,0,0,1,1,0,1
+176,17306570e772e7718c92a562d33f5f1d,SP,bariri,27,21.94588045234249,🔴 At Risk,3.778,7.41,18.52,14.36,Wrong Product,3 — Product Intervention,2,2,0,0,1,1,0,1
+177,39d54ff918774174706fb065d7f9dc07,SP,sao paulo,22,22.271405492730214,🔴 At Risk,4.045,13.64,18.18,13.9,Mixed — Product Quality/Poor Packaging,3 — Product Intervention,2,1,0,0,0,1,1,0
+178,6fc26fe110feebd80a433e1f012a84f9,SP,fernandopolis,35,22.68820678513732,🔴 At Risk,3.912,11.43,14.71,12.88,Mixed — Product Quality/Poor Packaging,3 — Product Intervention,3,1,0,0,0,1,1,0
+179,adcf50477d6a1f5d91bb9d54c4903cb5,MG,claudio,16,6.77140549273021,🔴 At Risk,3.563,18.75,18.75,23.49,Uncategorised,4 — Review Directly,3,0,0,0,0,1,0,0
+180,5b581417df4480f632484ba681e53944,SC,florianopolis,11,15.108239095315028,🔴 At Risk,3.727,27.27,9.09,18.41,Uncategorised,4 — Review Directly,1,0,0,0,0,1,0,0
+181,c679fb69a36e1d8349e8c50a217b4d58,RS,caxias do sul,14,17.140549273021,🔴 At Risk,3.846,14.29,23.08,11.07,Uncategorised,4 — Review Directly,1,0,0,0,0,1,1,0
+182,5ab05b6d86d417796c69ffd6774ec832,SP,assis,10,17.869951534733442,🔴 At Risk,3.8,10.0,20.0,13.94,Uncategorised,4 — Review Directly,2,0,0,0,0,1,0,0
+183,8f78f0903005064036736c7173a5c2ed,MG,tiradentes,13,18.565428109854604,🔴 At Risk,3.769,7.69,23.08,17.42,Poor Communication,4 — Review Directly,3,1,0,0,0,1,0,1
+184,04aa0a1c5ce6b222003403a3e11c3cc0,SP,cosmopolis,11,19.510500807754443,🔴 At Risk,4.091,18.18,18.18,17.52,Uncategorised,4 — Review Directly,2,0,0,0,0,1,0,0
+185,63ffcb71394dd8ea3872ed9ffda17c74,RJ,itaborai,17,19.9329563812601,🔴 At Risk,3.176,5.88,29.41,13.25,Uncategorised,4 — Review Directly,3,0,0,0,0,1,0,0
+186,5abb8ea023c77787f2c15da891c8d384,SC,joinville,13,21.970920840064625,🔴 At Risk,3.923,23.08,7.69,19.68,Poor Packaging,4 — Review Directly,1,1,0,0,0,1,0,0

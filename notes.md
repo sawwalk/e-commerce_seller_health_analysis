@@ -219,9 +219,11 @@ Orders with full chain (items + review)	97,917	98.47%
 
 
 
-Join health between key tables for seller scoring is strong. With 759 reviews that can not be attributed to any seller making up 0.76% of total orders which will naturally be filtered out without causing significant bias. Overall join health between the 3 key tables is strong with 98.47% of the data being fully usable for seller performance analysis. 
+Join health between key tables for seller scoring is strong. With 759 reviews that can not be attributed to any seller making up 0.76% of total orders which will naturally be filtered out without causing significant bias. Overall join health between the 3 key tables is strong with 98.47% of the data being fully usable for seller performance analysis.
 
 
+
+Source on using customer health metrics in SaaS companies: https://www.gainsight.com/guides/the-customer-success-index/
 
 &#x20;
 
