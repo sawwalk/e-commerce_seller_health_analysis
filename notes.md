@@ -225,5 +225,609 @@ Join health between key tables for seller scoring is strong. With 759 reviews th
 
 Source on using customer health metrics in SaaS companies: https://www.gainsight.com/guides/the-customer-success-index/
 
+
+
+
+
+
+
+\## Poorly Categorized Reviews:
+
+\### DELIVERY DELAY ###
+
+3\. Score: 1★
+
+&#x20;     PT: O produto não chegou à unidade dos correios. Invés de tomar a responsabilidade para si e estonar o valor, a loja disse que só faria o estorno após receber de volta o objeto. Sou cliente não entregador
+
+&#x20;     EN: The product did not arrive at the post office. Instead of taking responsibility and refunding the value, the store said it would only issue a refund after receiving the item back. I am a non-delivery customer
+
 &#x20;
+
+4\. Score: 1★
+
+&#x20;     PT: Somente recebi o produto (Relógio Casio G-shock Ga-100cm-8adr), outro que esta no mesmo pedido não foi enviado.
+
+&#x20;     EN: I only received the product (Casio G-shock Ga-100cm-8adr Watch), another one in the same order was not sent.
+
+
+
+\### NON-DELIVERY ###
+
+&#x20;1. Score: 1★
+
+&#x20;     PT: Não recebi o produto até hoje !!!
+
+&#x20;     EN: I haven't received the product until today!!!
+
+
+
+\### PRODUCT QUALITY ###
+
+1\. Score: 1★
+
+&#x20;     PT: Acredito não ter recebido por conta da greve . Mas não indico a lannister por motivo de venda de televisão com defeito
+
+&#x20;     EN: I believe I didn't receive it due to the strike. But I do not recommend Lannister due to the sale of defective televisions. (Here I think this does reference a product quality issue with this seller who is known for defective TV's but I don't think this comes directly from this customers experience, that being said this still hurts reputation so I do not know if I should count this as a product complaint or not.)
+
+2\. Score: 1★
+
+&#x20;     PT: Pessimo vendedor, foi entregue parte do Pedido, e os que vieram são errados, comprei 60XL color veio 60XL Preto
+
+&#x20;     EN: Terrible seller, part of the Order was delivered, and the ones that came were wrong, I bought 60XL color came 60XL Black
+
+7\. Score: 1★
+
+&#x20;     PT: Produto muito diferente da imagem apresentada no site da lannister, o diâmetro não chega nem
+
+próximo do apresentado no site, não serve na cama Queen Size, péssimo acabamento não tem nada de Elegance
+
+&#x20;     EN: Product very different from the image presented on the Lannister website, the diameter is not even enough
+
+close to what is shown on the website, does not fit a Queen Size bed, poor finish, has nothing Elegance
+
+
+
+\### WRONG PRODUCT ###
+
+1\. Score: 2★
+
+&#x20;     PT: Comprei três produtos e recebi apenas um .
+
+&#x20;     EN: I bought three products and only received one.
+
+5\. Score: 1★
+
+&#x20;     PT: COMPREI 2 PRODUTOS E SÓ ME ENTREGARAM ATE AGORA NÃO TIVE RESPOSTA SOBRE O OUTRO PRODUTO!
+
+&#x20;     EN: I BOUGHT 2 PRODUCTS AND THEY ONLY DELIVERED IT TO ME SO FAR I HAVE NO RESPONSE ABOUT THE OTHER PRODUCT!
+
+6\. Score: 2★
+
+&#x20;     PT: comprei dois produtos e só recebi um sem nota fiscal
+
+&#x20;     EN: I bought two products and only received one without an invoice
+
+7\. Score: 2★
+
+&#x20;     PT: Comprei dois produtos e recebi apenas um.
+
+&#x20;     EN: I bought two products and only received one.
+
+9\. Score: 1★
+
+&#x20;     PT: comprei 2 quite e so recebi 1 estou aguardando o outro
+
+&#x20;     EN: I bought 2 sets and only received 1, I'm waiting for the other one
+
+
+
+\### POOR COMMUNICATION ###
+
+4\. Score: 1★
+
+&#x20;     PT: Infelizmente o fone não reconhece em nenhum tipo de celular , já entrei em contato com a stark , inclusive hoje.
+
+Pediram que eu aguardasse vcs entrarem em contato em dois dias
+
+&#x20;     EN: Unfortunately, the phone does not recognize it on any type of cell phone, I have already contacted Stark, including today.
+
+They asked me to wait for you to get in touch in two days (Not sure if this demonstraights poor communication)
+
+
+
+\### POOR PACKAGING ###
+
+1\. Score: 1★
+
+&#x20;     PT: Boa tarde,qdo comprei era cartucho hp 933XL original e veio cartucho desconhecido com tinta.
+
+No anuncio nao deveriam colocar a embalagem do produto,pois pela foto é que eu queria mas vei o generico.
+
+&#x20;     EN: Good afternoon, when I bought it, it was an original HP 933XL cartridge and it came with an unknown cartridge with ink.
+
+In the ad, they shouldn't include the packaging of the product, because from the photo I wanted it but I saw the generic one. (I feel like they are talking about the product not the packaging)
+
+3\. Score: 1★
+
+&#x20;     PT: O produto recebido em embalagem lacrada, após abrir observei que o perfume estava com tampa do spray com uma colar envelhecida e com arranhões e a parte metálica solta. Desconfio da originalidade.
+
+&#x20;     EN: The product was received in a sealed package, after opening it I noticed that the perfume had a spray cap with an aged collar with scratches and the metal part was loose. I suspect originality.
+
+6\. Score: 1★
+
+&#x20;     PT: Comprei duas capa de sofa nf correta na embalagem só veio uma
+
+&#x20;     EN: I bought two sofa covers not correct in the packaging only one came
+
+&#x20;
+
+
+
+## Prompt for new conversation after completing jupyter notebooks
+
+## Project Context — Olist Seller Health Analysis
+
+### Role and scenario
+
+I am a data analyst on Olist's Seller Success team.
+I was asked by the Head of Operations to identify
+sellers who are negatively impacting platform
+reputation and characterise what poor performance
+looks like, so the team can prioritise proactive
+outreach before issues escalate.
+
+Olist is a Brazilian SaaS marketplace integrator
+that connects small and medium-sized sellers to
+major Brazilian online marketplaces under a shared
+Olist Store brand. All sellers share collective
+reputation — one underperforming seller affects
+the whole platform.
+
+### Stack
+
+Python (pandas, matplotlib, seaborn, scipy),
+PostgreSQL (pgAdmin), Jupyter Notebooks, Tableau,
+deep-translator for review translation.
+
+### Project structure
+
+Brazil\_E-Commerce/
+├── 01\_setup/
+│   ├── 01\_create\_schema.sql
+│   ├── 02\_load\_data.py
+│   ├── 03\_data\_validation.sql
+│   └── 04\_add\_constraints.sql
+└── 02\_analysis/
+├── 05\_EDA.ipynb
+├── 06\_seller\_feature\_engineering.ipynb
+└── 07\_review\_text\_analysis.ipynb
+
+data/raw/        — 9 original Kaggle CSVs
+data/processed/  — seller\_health\_scores.csv
+seller\_excluded.csv
+at\_risk\_profiles.csv
+at\_risk\_profiles\_final.csv
+
+### Dataset
+
+Olist Brazilian E-Commerce public dataset from
+Kaggle. 9 CSV files covering orders, customers,
+sellers, products, payments, reviews, and
+geolocation. Period: September 2016–October 2018. (Max order\_purchase\_timestamp = 2018-10-17 17:30:18)
+99,441 orders. Analytical universe: 97,917 orders (Min order\_purchase\_timestamp = 2016-09-04 21:15:19)
+with complete chain (items + delivery + review).
+
+### What has been completed
+
+**Notebook 05 — EDA**
+Four analytical questions answered:
+
+Q1 — Review score distribution: heavily right-skewed.
+57.8% five-star, 11.5% one-star. Platform weighted
+average: 4.09. One-star rate tracked separately as
+it captures extreme dissatisfaction that averages
+obscure.
+
+Q2 — Seller order volume: 2,970 sellers with
+delivered orders. Median 7 orders, mean 32.9,
+heavily right-skewed. 58.4% of sellers have fewer
+than 10 orders. Minimum scoring threshold set at
+10 delivered orders. Revenue follows marketplace
+power law — 17.9% of sellers generate 80% of GMV,
+less concentrated than typical marketplace
+benchmarks per Marketplace Pulse research.
+
+Q3 — Delivery delay: 91.89% of orders delivered
+early. Median order arrives 11.95 days ahead of
+estimated date. Olist deliberately sets generous
+estimated windows (avg 23.74 days) against actual
+delivery of 12.56 days — an 11.18 day buffer
+strategy. Only 8.11% of orders are late. Extreme
+outliers: 360 orders (0.37%) more than 30 days late.
+
+Q4 — Factors associated with low review scores:
+
+* Spearman correlation (delay vs review score):
+ρ = -0.1757, p < 0.0001 (weak but significant)
+* Spearman correlation (actual delivery days vs
+review score): ρ = -0.2344, p < 0.0001
+* Mann-Whitney U test (late vs early/on-time):
+U = 530,208,489, p < 0.0001
+* Effect size (rank-biserial): -0.5534 (large)
+Interpretation: 77.7% probability early order
+has higher review score than late order
+* Key finding: threshold effect not sliding scale.
+Scores stable (4.24–4.33) across all early
+delivery buckets, collapse to 3.18 for 0–7 days
+late, further to \~1.6–1.75 for 7+ days late.
+* Late order RATE is more discriminating than
+average delay days given 92% early delivery.
+* Actual delivery time is a stronger signal than
+relative delay for customer satisfaction.
+
+**Notebook 06 — Seller Feature Engineering
+and Health Scoring**
+
+Feature table built for 2,970 sellers using a
+CTE-based SQL query that pre-aggregates to order
+level to avoid multi-item order duplication.
+Key features: total\_orders, total\_gmv,
+avg\_review\_score, review\_response\_rate,
+pct\_one\_star, avg\_actual\_delivery\_days,
+avg\_delay\_days, late\_order\_rate, pct\_extreme\_late,
+orders\_last\_6\_months, first/last order dates.
+
+Scoring methodology:
+
+* Scoreable population: 1,238 sellers
+(10+ orders, non-null review score)
+* Excluded: 1,732 sellers (insufficient history)
+* Normalisation: percentile ranking within
+scoreable population. Chosen over z-score and
+min-max for interpretability and robustness
+to skew.
+* pct\_extreme\_late removed from score due to
+zero inflation (83.4% of sellers have zero
+extreme late orders — percentile ranking
+non-discriminatory). Converted to binary flag.
+
+Health score formula (0–100, higher = healthier):
+health\_score =
+(review\_score\_pct  × 0.40) +
+(late\_rate\_pct     × 0.28) +
+(one\_star\_pct      × 0.22) +
+(delivery\_days\_pct × 0.10)
+
+All inverted metrics (late\_rate, one\_star,
+delivery\_days) use: 100 - percentile\_rank
+so higher always means healthier.
+
+Tier thresholds (based on score distribution):
+
+* At Risk:  score < 23.0  → 186 sellers (15.0%)
+* Monitor:  23.0–43.0     → 309 sellers (25.0%)
+* Healthy:  > 43.0        → 743 sellers (60.0%)
+
+Sensitivity analysis: 91.3% of sellers receive
+identical tier across three weight configurations.
+At Risk tier 87.6% stable. No sellers jump
+between At Risk and Healthy — no contradictory
+classifications.
+
+Additional flags per seller:
+
+* extreme\_late\_flag: at least one order >30 days late
+* boundary\_case\_flag: tier changes across weight
+configurations (108 sellers, 8.7%)
+
+**Notebook 07 — Review Text Analysis**
+
+Scope: 2,328 negative reviews (1–2 star) with
+written comments from 186 At Risk sellers.
+
+Methodology: keyword-based complaint categorisation
+in Portuguese with prefix stemming. Six categories.
+Iterative refinement through precision evaluation
+(manual translation of 10 reviews per category
+using deep-translator/Google Translate, evaluated
+against 70% precision threshold).
+
+Final precision scores:
+
+* Non-Delivery:      90% — High confidence
+* Poor Communication: 90% — High confidence
+* Delivery Delay:    80% — High confidence
+* Wrong Product:     80% — High confidence
+* Product Quality:   70% — Moderate confidence
+* Poor Packaging:    70% — Moderate confidence
+
+Uncategorised: 40.0% of reviews (predominantly
+short emotional expressions, positive text with
+negative scores, idiomatic language).
+
+Key refinement: partial delivery keywords
+(só recebi, recebi apenas, so recebi) transferred
+from Wrong Product to Non-Delivery after precision
+evaluation revealed systematic miscategorisation.
+
+Complaint distribution (categorised reviews,
+n=1,397 from 180 sellers):
+
+* Non-Delivery:       696 (49.8%)
+* Delivery Delay:     441 (31.6%)
+* Wrong Product:      218 (15.6%)
+* Product Quality:    196 (14.0%)
+* Poor Communication: 135 (9.7%)
+* Poor Packaging:      65 (4.7%)
+* Return/refund flag: 180 (7.7% — consequence
+indicator, not primary category)
+
+Delivery-related combined (deduplicated):
+977 reviews (69.9%)
+Product-related combined (deduplicated):
+393 reviews (28.1%)
+
+Seller complaint profiles built with:
+
+* dominant\_category: primary failure mode
+* Binary flags per category
+* compound\_failure: avg 1.5+ categories per review
+* delivery\_comms\_compound: delivery AND
+communication failure co-present
+* low\_review\_coverage: fewer than 3 categorised
+reviews (directional only)
+* intervention\_priority: 4-tier prioritisation
+
+### Key findings
+
+1. 186 sellers (15.0% of scoreable population)
+are At Risk.
+2. Delivery failure is the primary failure mode
+for \~75% of At Risk sellers. Dominant category
+distribution:
+
+   * Non-Delivery: 83 sellers (44.6%)
+   * Mixed Delivery Delay/Non-Delivery: 33 (17.7%)
+   * Delivery Delay: 23 (12.4%)
+   * Mixed categories (delivery-involved): \~16
+3. Delivery Delay sellers are the worst performers
+by health score (mean 10.30) despite being fewer
+in number than Non-Delivery sellers (mean 13.59).
+4. Wrong Product sellers have the highest 1-star
+rate (27.93%) but the lowest late order rate
+(8.52%) — product failure, not logistics failure.
+5. 61 sellers (32.8% of At Risk) have delivery +
+communication compound failure — the most
+damaging pattern identified. Mean health score
+12.2 vs 14.1 for non-compound sellers.
+6. 45 sellers (24.2%) carry extreme late flag
+(at least one order >30 days late).
+7. 68 sellers (36.6%) have low review coverage
+(<3 categorised reviews) — profiles directional.
+
+### Intervention priority distribution
+
+Priority 1 — Immediate (Delivery+Comms): 61
+Priority 2 — Logistics Intervention:    106
+Priority 3 — Product Intervention:       11
+Priority 4 — Review Directly:             8
+
+### Exported files
+
+* data/processed/seller\_health\_scores.csv
+(1,238 scoreable sellers with full metrics,
+health score, tier, and flags)
+* data/processed/seller\_excluded.csv  
+(1,732 excluded sellers)
+* data/processed/at\_risk\_profiles\_final.csv
+(186 At Risk sellers with complaint profiles,
+dominant category, intervention priority,
+ranked by health score within priority tier)
+
+### Key methodological decisions already made
+
+These should not be re-litigated without good
+reason:
+
+* Minimum order threshold: 10 delivered orders
+* Normalisation: percentile ranking
+* pct\_extreme\_late: binary flag, excluded from score
+* Health score weights: 0.40/0.28/0.22/0.10
+* Tier thresholds: 23.0 and 43.0
+* Precision threshold: 70%
+* Mixed category threshold: 90% ratio
+* Low coverage threshold: 3 categorised reviews
+* Complaint categories: 6 (final v3 dictionary)
+
+### What I need help with next
+
+1. Tableau dashboard planning — what to build,
+how to structure it for the Head of Operations
+and Seller Success team audiences
+2. README writing — structure, content, and
+how to present AI tool usage honestly
+3. Project polish — any gaps before GitHub upload
+
+### How to help me
+
+* Think like a professional data analyst
+* Help me develop my skills and guide me
+* Cite references to back up claims and
+data interpretations
+* Keep the business scenario front of mind:
+Head of Operations, Seller Success team,
+platform reputation management
+
+
+
+
+
+
+
+┌─────────────────────────────────────────────────────────────┐
+
+│  PLATFORM HEALTH OVERVIEW                    \[Active in past 6 months]  │
+
+├───────────┬───────────┬───────────┬─────────────────────────┤
+
+│ Scoreable │ At Risk   │ Priority 1│ Active At Risk           │
+
+│   1,238   │ 186 (15%) │    61     │ \[your count]            │
+
+├───────────┴───────────┴───────────┴─────────────────────────┤
+
+│                        │                                     │
+
+│  Intervention Priority │   Dominant Failure Mode             │
+
+│  (horiz. stacked bar)  │   (horiz. bar, sorted desc)         │
+
+│                        │                                     │
+
+│  P1 Immediate    61    │   Non-Delivery        83            │
+
+│  P2 Logistics   106    │   Mixed Delivery      33            │
+
+│  P3 Product      11    │   Delivery Delay      23            │
+
+│  P4 Review        8    │   Wrong Product       \[n]           │
+
+│                        │                                     │
+
+├────────────────────────┴─────────────────────────────────────┤
+
+│                                                              │
+
+│   Brazil State Map — At Risk Seller Count by State          │
+
+│   (filled/choropleth, colour intensity = count)             │
+
+│                                                              │
+
+│              \[callout text box — one insight sentence]       │
+
+└──────────────────────────────────────────────────────────────┘
+
+
+
+Seller ID | Health Score | Priority | Dominant Category | Total Orders | Avg Review Score | Late Order Rate | Extreme Late Flag | Compound Failure Flag
+
+┌────────────┬────────────────────────────────────────────────┐
+
+│  FILTERS   │  SELLER RISK EXPLORER                          │
+
+│            │                                                │
+
+│ Priority   │  Seller ID  │Score│Priority│Category│Orders   │
+
+│ \[1]\[2]\[3]  │  abc123...  │ 8.2 │  P1    │Non-Del │  34    │
+
+│ \[4]        │  def456...  │ 9.1 │  P1    │Delay   │  18    │
+
+│            │  ...        │     │        │        │        │
+
+│ Category   │                                                │
+
+│ \[multisel] │  (sorted: priority asc, score asc within)     │
+
+│            │                                                │
+
+│ Flags      │  Late Rate │ 1-Star │ Extreme │ Compound      │
+
+│ □ Extreme  │    %       │   %    │  Late   │ Failure       │
+
+│ □ Compound │                                                │
+
+│ □ Active   │                                                │
+
+│            │  → Click row to open Seller Profile           │
+
+└────────────┴────────────────────────────────────────────────┘
+
+
+
+
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+
+│  ← Back to Explorer                                          │
+
+│  Seller: \[ID]    Health Score: 8.2    Priority: IMMEDIATE   │
+
+├─────────────────────────┬────────────────────────────────────┤
+
+│  PERFORMANCE METRICS    │  COMPLAINT PROFILE                 │
+
+│                         │                                    │
+
+│  Metric    Seller  Plat │  Dominant: NON-DELIVERY            │
+
+│  Avg Score  2.1   4.09  │                                    │
+
+│  Late Rate  34%   8.1%  │  Non-Delivery      ████████ 12    │
+
+│  1-Star     41%   11.5% │  Delivery Delay    ████     6     │
+
+│  Del. Days  18.3  12.6  │  Wrong Product     ██       3     │
+
+│                         │  Poor Comms        ██       3     │
+
+│  Orders: 34
+
+&#x20;  Orders categorized:              │                                    │
+
+│  GMV: R$\[x]             │  ⚑ Extreme Late   ⚑ Compound     │
+
+│  Active: YES            │  ⚑ Return/Refund                  │
+
+│  Last order: \[date]     │                                    │
+
+├─────────────────────────┴────────────────────────────────────┤
+
+│  RECOMMENDED INTERVENTION                                    │
+
+│  Priority 1 — Immediate: Delivery and communication failure. │
+
+│  Escalate to logistics review. Outreach script should focus  │
+
+│  on tracking communication and delivery timeline.            │
+
+└──────────────────────────────────────────────────────────────┘
+
+
+
+### Reflections:
+
+I should have created a active in past 6 month column in seller\_health\_scores.csv to make it easier in tableau.
+
+Generally speaking I lost sight of the temporal aspect of my analysis and identifying recently active sellers.
+
+
+
+**Visualization changes:**
+
+Added title to  seller explorer with subtitle explaining context: "186 at risk sellers · Sorted by intervention priority and health score" 
+
+
+
+#### List of definitions I want to mention in tableau
+
+* Active sellers are defined as having a order purchase timestamp within the last six months since the final purchase in the dataset i.e. 6 months before 2018-10-17. 
+(Also how do you calculate the cutoff date 6 months before 2018-10-17? this was done in PostgreSQL using:
+COUNT(CASE
+
+&#x20;           WHEN ol.order\_purchase\_timestamp >=
+
+&#x20;                (SELECT max\_date FROM last\_order\_date)
+
+&#x20;                - INTERVAL '6 months'
+
+&#x20;           THEN ol.order\_id
+
+&#x20;       END)                                    AS orders\_last\_6\_months
+
+* Low review coverage: Is defined as a seller with < 3 categorized reviews.
+* Click any row to view it's seller profile.
 
