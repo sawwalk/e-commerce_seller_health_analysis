@@ -392,21 +392,66 @@ deep-translator for review translation.
 ### Project structure
 
 Brazil\_E-Commerce/
-├── 01\_setup/
-│   ├── 01\_create\_schema.sql
-│   ├── 02\_load\_data.py
-│   ├── 03\_data\_validation.sql
-│   └── 04\_add\_constraints.sql
-└── 02\_analysis/
-├── 05\_EDA.ipynb
-├── 06\_seller\_feature\_engineering.ipynb
-└── 07\_review\_text\_analysis.ipynb
 
-data/raw/        — 9 original Kaggle CSVs
-data/processed/  — seller\_health\_scores.csv
-seller\_excluded.csv
-at\_risk\_profiles.csv
-at\_risk\_profiles\_final.csv
+├── 01\_setup/
+
+│   ├── 01\_create\_schema.sql
+
+│   ├── 02\_load\_data.ipynb
+
+│   ├── 03\_data\_validation.sql
+
+│   └── 04\_foreign\_key\_constraints.sql
+
+│
+
+├── 02\_analysis/
+
+│   ├── 05\_EDA.ipynb
+
+│   ├── 06\_seller\_feature\_engineering.ipynb
+
+│   └── 07\_review\_text\_analysis.ipynb
+
+│
+
+├── dashboard/
+
+│   └── seller\_health\_dashboard.twbx
+
+│
+
+├── data/
+
+│   ├── raw/
+
+│   │   └── 9 original Kaggle CSVs
+
+│   └── processed/
+
+│       ├── at\_risk\_complaints\_long.csv
+
+│       ├── at\_risk\_profiles\_final.csv
+
+│       ├── seller\_excluded.csv
+
+│       └── seller\_health\_scores.csv
+
+│
+
+├── .gitignore
+
+├── AI\_diligence\_statement.txt
+
+├── GLOSSARY.md
+
+├── README.md
+
+└── notes.md
+
+
+
+
 
 ### Dataset
 
@@ -798,17 +843,16 @@ Seller ID | Health Score | Priority | Dominant Category | Total Orders | Avg Rev
 
 
 
-### Reflections:
+Add AOV
 
-I should have created a active in past 6 month column in seller\_health\_scores.csv to make it easier in tableau.
+&#x20; 
 
-Generally speaking I lost sight of the temporal aspect of my analysis and identifying recently active sellers.
+### Reflections/Future Improvements:
 
-
-
-**Visualization changes:**
-
-Added title to  seller explorer with subtitle explaining context: "186 at risk sellers · Sorted by intervention priority and health score" 
+* I should have created a active in past 6 month column in seller\_health\_scores.csv to make it easier in tableau. Generally speaking I lost sight of the temporal aspect of my analysis and identifying recently active sellers.
+* I should add Sate and city information to the seller explorer and profiles as this could theoretically influence outreach efforts that are examining delivery systems in that sellers area. 
+* It took a long time to make notes on everything to give a new reader all the context they need to understand the dashboard. Next time as I do my project I should keep track of all the definitions for metrics that I invent / create so that it is easier when I do my tableau project. 
+After completing a notebook I think I should go through and make note of all of the important definitions, try and plan what I want to show in my visualizations as well. 
 
 
 
@@ -830,4 +874,506 @@ COUNT(CASE
 
 * Low review coverage: Is defined as a seller with < 3 categorized reviews.
 * Click any row to view it's seller profile.
+* Final weight config for health scores:
+
+The baseline weight configuration (review score 40%, 
+
+late order rate 28%, 1-star rate 22%, actual delivery 
+
+days 10%) is adopted as the primary scoring model. 
+
+The 108 unstable sellers will be flagged in the 
+
+Tableau dashboard as 'boundary cases' — their raw 
+
+metric profiles should be reviewed directly by the 
+
+Seller Success team rather than relying solely on 
+
+tier classification.
+
+
+
+Link to workbook on Tableau public:
+
+https://public.tableau.com/app/profile/sam.walker3838/viz/OlistSellerRiskMonitor/Home
+
+
+
+
+
+## Prompt for new conversation after completing Tableau Dashboards
+
+## Project Context — Olist Seller Health Analysis
+
+### Role and scenario
+
+I am a data analyst on Olist's Seller Success team.
+I was asked by the Head of Operations to identify
+sellers who are negatively impacting platform
+reputation and characterise what poor performance
+looks like, so the team can prioritise proactive
+outreach before issues escalate.
+
+Olist is a Brazilian SaaS marketplace integrator
+that connects small and medium-sized sellers to
+major Brazilian online marketplaces under a shared
+Olist Store brand. All sellers share collective
+reputation — one underperforming seller affects
+the whole platform.
+
+### Stack
+
+Python (pandas, matplotlib, seaborn, scipy),
+PostgreSQL (pgAdmin), Jupyter Notebooks, Tableau,
+deep-translator for review translation.
+
+### Project structure
+
+Brazil\_E-Commerce/
+
+├── 01\_setup/
+
+│   ├── 01\_create\_schema.sql
+
+│   ├── 02\_load\_data.ipynb
+
+│   ├── 03\_data\_validation.sql
+
+│   └── 04\_foreign\_key\_constraints.sql
+
+│
+
+├── 02\_analysis/
+
+│   ├── 05\_EDA.ipynb
+
+│   ├── 06\_seller\_feature\_engineering.ipynb
+
+│   └── 07\_review\_text\_analysis.ipynb
+
+│
+
+├── dashboard/
+
+│   └── seller\_health\_dashboard.twbx
+
+│
+
+├── data/
+
+│   ├── raw/
+
+│   │   └── 9 original Kaggle CSVs
+
+│   └── processed/
+
+│       ├── at\_risk\_complaints\_long.csv
+
+│       ├── at\_risk\_profiles\_final.csv
+
+│       ├── seller\_excluded.csv
+
+│       └── seller\_health\_scores.csv
+
+│
+
+├── .gitignore
+
+├── AI\_diligence\_statement.txt
+
+├── GLOSSARY.md
+
+├── README.md
+
+└── notes.md
+
+
+
+
+
+### Dataset
+
+Olist Brazilian E-Commerce public dataset from
+Kaggle. 9 CSV files covering orders, customers,
+sellers, products, payments, reviews, and
+geolocation. Period: September 2016–October 2018. (Max order\_purchase\_timestamp = 2018-10-17 17:30:18)
+99,441 orders. Analytical universe: 97,917 orders (Min order\_purchase\_timestamp = 2016-09-04 21:15:19)
+with complete chain (items + delivery + review).
+
+### What has been completed
+
+**Notebook 05 — EDA**
+Four analytical questions answered:
+
+Q1 — Review score distribution: heavily right-skewed.
+57.8% five-star, 11.5% one-star. Platform weighted
+average: 4.09. One-star rate tracked separately as
+it captures extreme dissatisfaction that averages
+obscure.
+
+Q2 — Seller order volume: 2,970 sellers with
+delivered orders. Median 7 orders, mean 32.9,
+heavily right-skewed. 58.4% of sellers have fewer
+than 10 orders. Minimum scoring threshold set at
+10 delivered orders. Revenue follows marketplace
+power law — 17.9% of sellers generate 80% of GMV,
+less concentrated than typical marketplace
+benchmarks per Marketplace Pulse research.
+
+Q3 — Delivery delay: 91.89% of orders delivered
+early. Median order arrives 11.95 days ahead of
+estimated date. Olist deliberately sets generous
+estimated windows (avg 23.74 days) against actual
+delivery of 12.56 days — an 11.18 day buffer
+strategy. Only 8.11% of orders are late. Extreme
+outliers: 360 orders (0.37%) more than 30 days late.
+
+Q4 — Factors associated with low review scores:
+
+* Spearman correlation (delay vs review score):
+ρ = -0.1757, p < 0.0001 (weak but significant)
+* Spearman correlation (actual delivery days vs
+review score): ρ = -0.2344, p < 0.0001
+* Mann-Whitney U test (late vs early/on-time):
+U = 530,208,489, p < 0.0001
+* Effect size (rank-biserial): -0.5534 (large)
+Interpretation: 77.7% probability early order
+has higher review score than late order
+* Key finding: threshold effect not sliding scale.
+Scores stable (4.24–4.33) across all early
+delivery buckets, collapse to 3.18 for 0–7 days
+late, further to \~1.6–1.75 for 7+ days late.
+* Late order RATE is more discriminating than
+average delay days given 92% early delivery.
+* Actual delivery time is a stronger signal than
+relative delay for customer satisfaction.
+
+**Notebook 06 — Seller Feature Engineering
+and Health Scoring**
+
+Feature table built for 2,970 sellers using a
+CTE-based SQL query that pre-aggregates to order
+level to avoid multi-item order duplication.
+Key features: total\_orders, total\_gmv,
+avg\_review\_score, review\_response\_rate,
+pct\_one\_star, avg\_actual\_delivery\_days,
+avg\_delay\_days, late\_order\_rate, pct\_extreme\_late,
+orders\_last\_6\_months, first/last order dates.
+
+Scoring methodology:
+
+* Scoreable population: 1,238 sellers
+(10+ orders, non-null review score)
+* Excluded: 1,732 sellers (insufficient history)
+* Normalisation: percentile ranking within
+scoreable population. Chosen over z-score and
+min-max for interpretability and robustness
+to skew.
+* pct\_extreme\_late removed from score due to
+zero inflation (83.4% of sellers have zero
+extreme late orders — percentile ranking
+non-discriminatory). Converted to binary flag.
+
+Health score formula (0–100, higher = healthier):
+health\_score =
+(review\_score\_pct  × 0.40) +
+(late\_rate\_pct     × 0.28) +
+(one\_star\_pct      × 0.22) +
+(delivery\_days\_pct × 0.10)
+
+All inverted metrics (late\_rate, one\_star,
+delivery\_days) use: 100 - percentile\_rank
+so higher always means healthier.
+
+Tier thresholds (based on score distribution):
+
+* At Risk:  score < 23.0  → 186 sellers (15.0%)
+* Monitor:  23.0–43.0     → 309 sellers (25.0%)
+* Healthy:  > 43.0        → 743 sellers (60.0%)
+
+Sensitivity analysis: 91.3% of sellers receive
+identical tier across three weight configurations.
+At Risk tier 87.6% stable. No sellers jump
+between At Risk and Healthy — no contradictory
+classifications.
+
+Additional flags per seller:
+
+* extreme\_late\_flag: at least one order >30 days late
+* boundary\_case\_flag: tier changes across weight
+configurations (108 sellers, 8.7%)
+
+**Notebook 07 — Review Text Analysis**
+
+Scope: 2,328 negative reviews (1–2 star) with
+written comments from 186 At Risk sellers.
+
+Methodology: keyword-based complaint categorisation
+in Portuguese with prefix stemming. Six categories.
+Iterative refinement through precision evaluation
+(manual translation of 10 reviews per category
+using deep-translator/Google Translate, evaluated
+against 70% precision threshold).
+
+Final precision scores:
+
+* Non-Delivery:      90% — High confidence
+* Poor Communication: 90% — High confidence
+* Delivery Delay:    80% — High confidence
+* Wrong Product:     80% — High confidence
+* Product Quality:   70% — Moderate confidence
+* Poor Packaging:    70% — Moderate confidence
+
+Uncategorised: 40.0% of reviews (predominantly
+short emotional expressions, positive text with
+negative scores, idiomatic language).
+
+Key refinement: partial delivery keywords
+(só recebi, recebi apenas, so recebi) transferred
+from Wrong Product to Non-Delivery after precision
+evaluation revealed systematic miscategorisation.
+
+Complaint distribution (categorised reviews,
+n=1,397 from 180 sellers):
+
+* Non-Delivery:       696 (49.8%)
+* Delivery Delay:     441 (31.6%)
+* Wrong Product:      218 (15.6%)
+* Product Quality:    196 (14.0%)
+* Poor Communication: 135 (9.7%)
+* Poor Packaging:      65 (4.7%)
+* Return/refund flag: 180 (7.7% — consequence
+indicator, not primary category)
+
+Delivery-related combined (deduplicated):
+977 reviews (69.9%)
+Product-related combined (deduplicated):
+393 reviews (28.1%)
+
+Seller complaint profiles built with:
+
+* dominant\_category: primary failure mode
+* Binary flags per category
+* compound\_failure: avg 1.5+ categories per review
+* delivery\_comms\_compound: delivery AND
+communication failure co-present
+* low\_review\_coverage: fewer than 3 categorised
+reviews (directional only)
+* intervention\_priority: 4-tier prioritization
+
+
+
+**Tableau dashboard — three dashboards built and published:**
+
+Dashboard 1 — Platform Health Overview (Head of Operations)
+
+
+
+KPI strip: Scoreable (1,238), At Risk (186, 15%), Priority 1 (61)
+
+Active sellers toggle filtering to orders between 2018-04-17 and 2018-10-17
+
+Dominant category horizontal bar chart — top 8 categories, uncategorised excluded, delivery/product colour encoding
+
+Intervention priority stacked bar with counts labelled
+
+Brazil choropleth map — At Risk seller count by state, SP dominates (130/186)
+
+Insight-driven titles throughout
+
+Caption: "This visualization shows the top 8 of 16 dominant categories and excludes the 6 uncategorised sellers that did not have any categorized reviews"
+
+
+
+Dashboard 2 — At Risk Seller Explorer (Seller Success Team)
+
+
+
+Ranked table: Rank, Seller Id, Intervention Priority, Dominant Category, Health Score, Avg Review Score, Late Order Rate, Total Orders, Orders Last 6 Months, Low Review Coverage, Extreme Late Flag
+
+Filters: Compound Failure, Active In Last 6 Months, Extreme Late Flag, Low Review Coverage, Intervention Priority, Dominant Category — grouped with section headers
+
+Row colour encoding by Intervention Priority (consistent palette across all dashboards)
+
+Filter action wired to Dashboard 3 on Seller Id
+
+Title: "At Risk Seller Explorer" · subtitle: "186 at risk sellers · Sorted by intervention priority and health score"
+
+
+
+Dashboard 3 — Seller Profile (Seller Success Team)
+
+
+
+Header strip: Health Score, Rank, Seller Id, Priority (colour encoded), Dominant Category
+
+Performance Metrics panel: Avg Review Score, Late Order Rate, Pct One Star Review, Average Delivery Days — each with seller value (conditionally red/green vs benchmark) and Platform Benchmark column. Benchmarks from full analytical universe (97,917 orders)
+
+Order History panel: Active Period (First Order → Last Order), Total Orders, Total GMV R$, Orders In Last 6 Months
+
+Review Profile panel: Total Negative Reviews, Total Categorised above complaint bar chart; bar chart coloured by category, sorted descending, zero counts filtered out
+
+Flags panel: ⚑ Extreme Late Orders, ⚑ Delivery + Comms Failure in red; (!) Low Review Coverage in separate style; driven by calculated fields concatenated with CHAR(10)
+
+Recommended Intervention panel: CASE-based text lookup by intervention priority, priority header in red, body text in black
+
+Back to Seller Explorer navigation button top left
+
+Filter action from Dashboard 2 targets all Dashboard 3 sheets on Seller Id across both data sources (at\_risk\_profiles\_final+ and at\_risk\_complaints\_long)
+
+
+
+Home tab:
+
+
+
+Title: Olist Seller Risk Monitor
+
+Subtitle: Seller Success Team · Olist Operations
+
+Data period and scored population context
+
+How to use this workbook section (three dashboard descriptions)
+
+Key Concepts section at bottom: Health Score, Risk Tiers, Intervention Priority definitions drawn from GLOSSARY.md
+
+Footer: Analysis conducted by Samuel Walker · Olist Brazilian E-Commerce Dataset (Kaggle) · Built in Tableau Public
+
+### Key findings
+
+1. 186 sellers (15.0% of scoreable population)
+are At Risk.
+2. Delivery failure is the primary failure mode
+for \~75% of At Risk sellers. Dominant category
+distribution:
+
+   * Non-Delivery: 83 sellers (44.6%)
+   * Mixed Delivery Delay/Non-Delivery: 33 (17.7%)
+   * Delivery Delay: 23 (12.4%)
+   * Mixed categories (delivery-involved): \~16
+3. Delivery Delay sellers are the worst performers
+by health score (mean 10.30) despite being fewer
+in number than Non-Delivery sellers (mean 13.59).
+4. Wrong Product sellers have the highest 1-star
+rate (27.93%) but the lowest late order rate
+(8.52%) — product failure, not logistics failure.
+5. 61 sellers (32.8% of At Risk) have delivery +
+communication compound failure — the most
+damaging pattern identified. Mean health score
+12.2 vs 14.1 for non-compound sellers.
+6. 45 sellers (24.2%) carry extreme late flag
+(at least one order >30 days late).
+7. 68 sellers (36.6%) have low review coverage
+(<3 categorised reviews) — profiles directional.
+
+### Intervention priority distribution
+
+Priority 1 — Immediate (Delivery+Comms): 61
+Priority 2 — Logistics Intervention:    106
+Priority 3 — Product Intervention:       11
+Priority 4 — Review Directly:             8
+
+### Exported files
+
+* data/processed/seller\_health\_scores.csv
+(1,238 scoreable sellers with full metrics,
+health score, tier, and flags)
+* data/processed/seller\_excluded.csv  
+(1,732 excluded sellers)
+* data/processed/at\_risk\_profiles\_final.csv
+(186 At Risk sellers with complaint profiles,
+dominant category, intervention priority,
+ranked by health score within priority tier)
+
+### Key methodological decisions already made
+
+These should not be re-litigated without good
+reason:
+
+* Minimum order threshold: 10 delivered orders
+* Normalisation: percentile ranking
+* pct\_extreme\_late: binary flag, excluded from score
+* Health score weights: 0.40/0.28/0.22/0.10
+* Tier thresholds: 23.0 and 43.0
+* Precision threshold: 70%
+* Mixed category threshold: 90% ratio
+* Low coverage threshold: 3 categorised reviews
+* Complaint categories: 6 (final v3 dictionary)
+
+### What I need help with next
+
+1. README writing — structure, content, and
+how to present AI tool usage honestly
+2. Project polish — any gaps before GitHub upload
+
+
+
+#### Agreed README Structure:
+
+Project Results Section:
+
+
+
+1. Project Overview — 2–3 sentences, business scenario not tech
+2. Data Structure Overview — intro to health score metrics, flags, complaint categories, domain knowledge for the reader
+3. Executive Summary — aimed directly at the Head of Operations, key findings
+4. Insights Deep Dive — additional layer of detail beneath the executive summary
+5. Recommendations — tie everything together, outline next steps
+
+
+
+Project Methodology Section:
+
+
+
+6\. Methodology Overview — diagram or table showing notebook → output flow
+
+
+
+7\. Repository Structure — annotated directory tree
+
+
+
+8\. Data Source — Kaggle citation, dataset period, scope
+
+
+
+9\. Technical Stack
+
+
+
+10\. How to Reproduce — setup steps, dependencies
+
+
+
+11\. Limitations and Caveats
+
+
+
+12\. AI Tool Usage
+
+
+
+#### Limitations to document in README:
+
+
+
+* 40% uncategorised review rate — predominantly short emotional expressions and idiomatic Portuguese
+* 1,732 sellers excluded for insufficient history
+* Complaint categorisation precision validated on small samples (n=10 per category)
+* avg\_actual\_delivery\_days partially influenced by geographic distance between seller and customer, not solely within seller control
+* Platform benchmarks from full dataset differ from scoreable population benchmarks — full dataset chosen to represent customer experience
+
+### How to help me
+
+* Think like a professional data analyst
+* Help me develop my skills and guide me
+* Cite references to back up claims and
+data interpretations
+* Keep the business scenario front of mind:
+Head of Operations, Seller Success team,
+platform reputation management
+
+
 
