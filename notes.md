@@ -853,6 +853,7 @@ Add AOV
 * I should add Sate and city information to the seller explorer and profiles as this could theoretically influence outreach efforts that are examining delivery systems in that sellers area. 
 * It took a long time to make notes on everything to give a new reader all the context they need to understand the dashboard. Next time as I do my project I should keep track of all the definitions for metrics that I invent / create so that it is easier when I do my tableau project. 
 After completing a notebook I think I should go through and make note of all of the important definitions, try and plan what I want to show in my visualizations as well. 
+* When creating the README and tableau dashboard I was slowed down because of having to find definitions and justifications for methodological decisions when trying to build a narrative for the reader. One thing I think I can do in future is outline the sections that I know I am going to have in my README, methodology, glossary, deep dive insights etc. I should create  summaries of the relevant content for each section at the end of each notebook and also create separate documents for each so that at the end when I make my README I can put the full info into AI and ask it to filter for the most important parts. 
 
 
 
@@ -1303,13 +1304,9 @@ reason:
 
 ### What I need help with next
 
-1. README writing — structure, content, and
-how to present AI tool usage honestly
-2. Project polish — any gaps before GitHub upload
+README writing — Please help me write my README using the following README Structure
 
-
-
-#### Agreed README Structure:
+#### README Structure:
 
 Project Results Section:
 
@@ -1374,6 +1371,34 @@ data interpretations
 * Keep the business scenario front of mind:
 Head of Operations, Seller Success team,
 platform reputation management
+
+
+
+/c/Users/samww/Documents/Codecademy\_projects/portfolio\_projects/Brazil\_E-Commerce
+
+
+
+I accept your recommendation on "deduplicated". Please follow the actions you outlined regarding this. 
+
+
+
+
+
+
+
+Question 1: 
+
+
+
+There is no correct population average to site instead. You can mention that some reviews contained multiple different complaints and that sellers with over 1.5 complaints on average are flagged for having compounding customer complaints. You will have to remove the claim about customers mostly complaining about multiple issues. 
+
+
+
+
+
+
+
+Question 2:
 
 
 
