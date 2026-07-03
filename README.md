@@ -4,6 +4,8 @@
 
 > **TL;DR:** Of 1,238 sellers with enough order history to score reliably, **186 (15.0%) are flagged At Risk**. Delivery failure — not product quality — is the dominant cause. **61 of those sellers show a compound delivery + communication failure and are recommended for immediate outreach.**
 
+***Disclaimer**: This is an independent portfolio project built on Olist's public Kaggle dataset. I am not an Olist employee. The "Seller Success" role, the Head of Operations, and the scenario framing used throughout this README are a hypothetical construct adopted to practice presenting analysis the way a working analyst would — not an actual engagement with, or endorsement by, Olist.*
+
 🔗 **[View the live interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/sam.walker3838/viz/OlistSellerRiskMonitor/Home)**
 
 
@@ -226,8 +228,7 @@ Brazil_E-Commerce/
 ├── .gitignore
 ├── AI_diligence_statement.txt         # AI tool usage disclosure (see Section 12)
 ├── GLOSSARY.md                        # Full definitions for score, tiers, flags
-├── README.md                          # This file
-└── notes.md                           # Working notes / scratchpad
+└── README.md                          # This file
 ```
 
 ---
@@ -281,7 +282,11 @@ This analysis is decision-support, not ground truth — the following should be 
 
 ## 12. AI Tool Usage
 
-See `AI_diligence_statement.txt` for the full disclosure of where AI assistance was used in this project (e.g., code drafting support, README structuring) and where analytical decisions, validation, and interpretation were performed directly.
+I collaborated with Claude (Anthropic) throughout this project — for exploratory analysis framing, SQL drafting and debugging, statistical methodology review, Tableau calculated-field logic, and documentation. All AI-generated and co-created content was reviewed and validated before being accepted into the final analysis: statistical claims were checked against primary sources, generated SQL was verified against real query outputs, and methodology conclusions were tested rather than taken on faith. The final output — its accuracy, its interpretations, and its presentation — is my responsibility.
+
+One example: an early version of the seller feature table returned review response rates above 100% for some sellers — a mathematical impossibility that AI-generated code had produced but not caught. Diagnosing it surfaced a multi-item order duplication problem in the join chain, fixed by restructuring the query with a CTE that pre-aggregates to the order level before computing seller-level rates.
+
+See [`AI_diligence_statement.md`](AI_diligence_statement.md) for the full disclosure, including four further examples of where I corrected, refined, or verified AI output before it entered this analysis.
 
 ---
 
