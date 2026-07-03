@@ -2,5 +2,7 @@
 ~$*
 
 # Jupyter checkpoints
-.ipynb_checkpoints/
-**/.ipynb_checkpoints/notes.md
+**/.ipynb_checkpoints/
+
+# Rough drafts / working notes
+notes.md
