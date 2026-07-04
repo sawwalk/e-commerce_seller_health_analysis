@@ -43,17 +43,15 @@ As a data analyst on the Seller Success team, I was asked by the Head of Operati
 
 Before the findings, a short glossary — these terms recur throughout the analysis and the dashboard.
 
-**Health Score (0–100, higher = healthier).** A weighted, percentile-based composite of four seller-level metrics: average review score (40%), late order rate (28%), one-star review rate (22%), and average delivery time (10%). Only sellers with 10+ delivered orders and a non-null review score are scored (1,238 of 2,970 total sellers — the "scoreable population"). See [Section 6](#6-methodology-overview) <!-- NOTE TO CLAUDE: Section 6 does not actually contain the supporting information but this should be added. Please make a note to add health score methodology to section 6 DO NOT EDIT, GATHER INFORMATION BY ASKING ME QUESTIONS --> for why percentile ranking was chosen and why the weights are set this way.
+**Health Score (0–100, higher = healthier).** A weighted, percentile-based composite of four seller-level metrics: average review score (40%), late order rate (28%), one-star review rate (22%), and average delivery time (10%). Only sellers with 10+ delivered orders are scored (1,238 of 2,970 total sellers — the "scoreable population"). See [Section 6](#6-methodology-overview) for why percentile ranking was chosen and why the weights are set this way.
 
-**Risk Tiers.** Sellers are split into three bands by health-score **percentile** within the scoreable population: 🔴 **At Risk** — below the 15th percentile (health score < 23.0), 186 sellers (15.0%), priority Seller Success outreach recommended. 🟡 **Monitor** — 15th–40th percentile (23.0–43.0), 309 sellers (25.0%), scheduled check-in recommended. 🟢 **Healthy** — above the 40th percentile (> 43.0), 743 sellers (60.0%), no action required at this time. See [Section 6](#6-methodology-overview) for why these percentile cutoffs were chosen.
+**Risk Tiers.** Sellers are split into three bands by health-score percentile within the scoreable population: 🔴 **At Risk** — below the 15th percentile (health score < 23.0), 186 sellers (15.0%), priority Seller Success outreach recommended. 🟡 **Monitor** — 15th–40th percentile (health scores from 23.0–43.0), 309 sellers (25.0%), scheduled check-in recommended. 🟢 **Healthy** — above the 40th percentile (health score > 43.0), 743 sellers (60.0%), no action required at this time. See [Section 6](#6-methodology-overview) for why these percentile cutoffs were chosen.
 
-**Complaint Categories.** For At Risk sellers only, negative (1–2 star) reviews with written comments were classified into six failure modes using Portuguese keyword matching: *Non-Delivery, Delivery Delay, Wrong Product, Product Quality, Poor Communication, Poor Packaging*. A seller's **dominant category** is their most frequent classified complaint type; if the top two categories are within 10% of each other, they're combined into a single "Mixed" dominant category (e.g., "Mixed – Non-Delivery/Product Quality") rather than arbitrarily picking a winner between two near-tied counts.
+**Complaint Categories.** For At Risk sellers only, negative (1–2 star) reviews with written comments were classified into six failure modes using Portuguese keyword matching: *Non-Delivery, Delivery Delay, Wrong Product, Product Quality, Poor Communication, Poor Packaging*. A seller's **dominant category** is their most frequent classified complaint type; if the counts of the top two categories are within 10% of each other, they're combined into a single "Mixed" dominant category (e.g., "Mixed – Non-Delivery/Product Quality") rather than arbitrarily picking a winner between two near-tied counts.
 
 **Flags.** Three binary indicators layered on top of the score: **extreme_late_flag** (at least one order delivered 30+ days late), **delivery_comms_compound** (a seller shows both delivery failure and communication-failure complaints — the most damaging combination observed), and **low_review_coverage** (fewer than 3 categorised reviews — treat that seller's profile as directional, not conclusive).
 
-**Intervention Priority (1–4).** The action-oriented output of the whole pipeline: Priority 1 (Immediate — delivery + communications compound failure), Priority 2 (Logistics Intervention), Priority 3 (Product Intervention), Priority 4 (Review Directly — usually low-coverage sellers who need a human look rather than a rule-based label).
-
-**Why this matters operationally:** Olist's own review economics make the stakes concrete. Platform-wide, delivery lateness is not a small drag on scores — it's a threshold effect. Review scores hold steady at 4.24–4.33 across every early-delivery bucket, then collapse to 3.18 the moment an order goes 0–7 days late, and to roughly 1.6–1.75 once it passes 7 days late. A late order isn't a slightly worse experience; it's a categorically different one. That's the mechanism this whole project is built to catch early.
+**Intervention Priority (1–4).** The action-oriented output of the whole pipeline and is assigned to At Risk Sellers: Priority 1 (Immediate — delivery + communications compound failure), Priority 2 (Logistics Intervention), Priority 3 (Product Intervention), Priority 4 (Review Directly — usually low-coverage sellers who need a human look rather than a rule-based label).
 
 ---
 
@@ -64,10 +62,10 @@ Before the findings, a short glossary — these terms recur throughout the analy
 **186 sellers (15.0% of the 1,238 sellers we can reliably score) are classified At Risk** — meaning their combination of review scores, late delivery rate, one-star rate, and delivery speed places them in the bottom performance band on the platform.
 
 ![Platform Health Overview dashboard showing 1,238 scoreable sellers, 186 At Risk, 61 Priority 1, and a bar chart of dominant complaint categories led by Non-Delivery](dashboard/screenshots/platform_health_overview.png)  
-*Platform Health Overview — Head of Operations view. Non-Delivery is the single largest dominant failure mode (83 sellers); 88% of dominant categories are delivery-based.*
+*Platform Health Overview — Head of Operations view. Non-Delivery is the single largest dominant failure mode (83 sellers); 88% of dominant categories are delivery-based.* 
 🔗 [Explore this dashboard live on Tableau Public](https://public.tableau.com/app/profile/sam.walker3838/viz/OlistSellerRiskMonitor/Home)
 
-**Delivery is the problem, not product quality.** Roughly three-quarters of At Risk sellers have a delivery-related dominant complaint (Non-Delivery, Delivery Delay, or a mixed delivery pattern), versus a minority driven primarily by product issues. Specifically:
+**Delivery is the problem, not product quality.** 88% of At Risk sellers have a delivery-related dominant complaint (Non-Delivery, Delivery Delay, or a mixed delivery pattern), versus a minority driven primarily by product issues. 75% have dominant complaints that are entirely delivery-related. Specifically: 
 
 - **Non-Delivery** (customer never received the item, or received only part of the order): 83 sellers (44.6% of At Risk) — the single largest failure mode.
 - **Delivery Delay**: 23 sellers (12.4%) outright, plus 33 more (17.7%) with a mixed delay/non-delivery pattern.
@@ -83,20 +81,21 @@ Before the findings, a short glossary — these terms recur throughout the analy
 *Priority tier breakdown (61 / 106 / 11 / 8) alongside geographic distribution of At Risk sellers — 94% of At Risk sellers fall within just five states (SP, MG, PR, SC, RJ).*
 🔗 [Explore this dashboard live on Tableau Public](https://public.tableau.com/app/profile/sam.walker3838/viz/OlistSellerRiskMonitor/Home)
 
-**Recommended immediate action:** Prioritise outreach to the 61 Priority-1 sellers (delivery + communications compound failure) this cycle; use the At Risk Seller Explorer dashboard to work the Priority 2 (Logistics, 106 sellers) and Priority 3 (Product, 11 sellers) queues afterward. Treat the 8 Priority-4 sellers and the 68 sellers flagged `low_review_coverage` as needing manual review rather than an automated message, since the evidence base behind their profile is thin.
+**Recommended immediate action:** Use the At Risk Seller Explorer to examine seller profiles. Prioritise outreach to the 61 Priority-1 sellers (delivery + communications compound failure) this cycle; work the Priority 2 (Logistics, 106 sellers) and Priority 3 (Product, 11 sellers) queues afterward. Treat the the 68 sellers flagged `low_review_coverage` including the 8 Priority-4 sellers as needing manual review, since the evidence base behind their profile is thin.
 
 ---
 
 ## 4. Insights Deep Dive
 
-### 4.1 Why delivery, and not reviews or price, drives the risk signal
+### 4.1 Why Delivery Timing—Not Speed—Drives Review Scores
 
-Four questions were answered in the EDA phase to establish what actually predicts a bad review, before any seller-level scoring was attempted — this ordering matters: you don't build a health score around a weak signal.
+Trends in delivery metrics were analyzed during the EDA phase to establish what actually predicts a bad review score, before any seller-level scoring was attempted.
 
 - Platform review scores are heavily right-skewed: 57.8% five-star, 11.5% one-star, weighted average 4.09. This is broadly consistent with Olist's own dataset documentation, which cites an average review score of ~4.04 — the small difference reflects how the two figures were computed (raw mean vs. weighted average over the analytical universe), and both point to the same conclusion: most customers are satisfied, so **the signal worth chasing is the minority who are not**, which is why the one-star rate is tracked as its own metric rather than folded silently into an average.
 - 91.89% of orders arrive **before** the estimated delivery date, with a median order arriving nearly 12 days early. This isn't sellers over-performing — Olist sets deliberately generous delivery windows (average estimate 23.74 days vs. average actual delivery of 12.56 days, an 11-day buffer). That buffer strategy matters for interpretation: it means "late" in this dataset is a meaningfully bad outcome relative to a promise Olist already padded, not a marginal miss.
 - The relationship between delivery time and review score is statistically real but modest in raw correlation terms — Spearman ρ = -0.2344 (actual delivery days vs. score), p < 0.0001. Under Cohen's (1988) original convention for interpreting correlation coefficients (r ≈ 0.1 small, 0.3 medium, 0.5 large), this sits at the small end. But a Spearman correlation assumes a roughly linear, sliding relationship — and that's not what's happening here.
-- The Mann-Whitney U test comparing late vs. on-time/early orders tells a sharper story: rank-biserial effect size of -0.5534, which crosses the "large effect" threshold under the standard convention for this statistic (|r| > 0.5 = large). In plain terms, there's a 77.7% probability that a randomly chosen early order has a higher review score than a randomly chosen late order. **This is a threshold effect, not a dial** — scores are flat and high across every early-delivery bucket, then step down hard once an order crosses into "late." That's why the health score design leans on *late order rate* rather than average delay magnitude: rate captures how often a seller crosses the threshold that actually moves reviews, while an average delay number gets diluted by the 92% of orders that were never late to begin with.
+- The **effect of late orders on review score** verified with a Mann-Whitney U test comparing late vs. on-time/early orders tells a sharper story: rank-biserial effect size of -0.5534, which crosses the "large effect" threshold under the standard convention for this statistic (|r| > 0.5 = large). In plain terms, there's a 77.7% probability that a randomly chosen early order has a higher review score than a randomly chosen late order. **This is a threshold effect, not a dial** — Average review scores hold steady at 4.24–4.33 across every early-delivery bucket, then collapse to 3.18 the moment an order goes 0–7 days late, and to roughly 1.6–1.75 once it passes 7 days late. A late order isn't a slightly worse experience; it's a categorically different one. That's why the health score design leans on *late order rate* (see [section 6](#6-methodology-overview)) rather than average delay magnitude. 
+
 
 ### 4.2 What this looks like for a real seller
 
@@ -112,7 +111,7 @@ Aggregate stats can obscure what "At Risk" actually means for an individual sell
 
 ## 5. Recommendations
 
-1. **Prioritise the 61 Priority-1 sellers for immediate, high-touch outreach.** These are the delivery + communication compound-failure sellers — the segment with both the worst mean health score (12.2) and the clearest evidence of a controllable root cause (communication is fixable without new logistics infrastructure). Recommend a direct account-manager call, not an automated email, given the stakes.
+1. **Prioritise the 61 Priority-1 sellers for immediate outreach.** These are the delivery + communication compound-failure sellers — the segment with both the worst mean health score (12.2) and the clearest evidence of a controllable root cause (communication is fixable without new logistics infrastructure). Recommend a direct account-manager call, not an automated email, given the stakes.
 
 2. **Split the Priority-2 logistics queue (106 sellers) by dominant sub-pattern.** Non-Delivery and Delivery Delay sellers likely need different interventions — Non-Delivery may point to inventory/fulfilment failures upstream of shipping, while Delivery Delay (the lower-scoring group, mean 10.30) more plausibly needs carrier or shipping-window coaching. Recommend the team validate this split with a small sample of direct seller conversations before scripting outreach.
 
@@ -134,11 +133,34 @@ Each notebook's output is the next notebook's input — the feature table in Not
 
 ### 6.1 Health Score Construction
 
-The score population itself required a judgment call. Seller order volume is heavily right-skewed (median 7 orders, mean 32.9 across 2,970 sellers with delivered orders), and 58.4% of sellers have fewer than 10 orders — too little history to trust a review-score average built on 2–3 data points. Setting the minimum threshold at 10 delivered orders shrinks the scoreable population to 1,238 sellers but makes every score defensible; the 1,732 excluded sellers aren't ignored, they're tracked separately (`seller_excluded.csv`) as a distinct "insufficient history" segment.
+The scored population itself required a judgment call. Seller order volume is heavily right-skewed (median 7 orders, mean 32.9 across 2,970 sellers with delivered orders), and 58.4% of sellers have fewer than 10 orders. Each order has an associated review score (1-5) — less than 10 orders is too little history to trust a review-score average. Setting the minimum threshold at 10 delivered orders shrinks the scoreable population to 1,238 sellers but makes every score defensible; the 1,732 excluded sellers aren't ignored, they're tracked separately (`seller_excluded.csv`) as a distinct "insufficient history" segment.
 
-Percentile ranking (rather than z-scores or min-max scaling) was chosen for the same reason the one-star rate is tracked separately from the average: several of the input metrics are skewed, and percentile rank is robust to that skew while staying easy to explain to a non-technical stakeholder ("this seller is worse than 85% of comparable sellers" is intuitive in a way a z-score of -1.3 is not).
+Percentile ranking was chosen over z-scores or min-max scaling for the health score design since several of the input metrics are skewed, and percentile rank is robust to that skew while staying easy to explain to a non-technical stakeholder ("this seller is worse than 85% of comparable sellers" is intuitive in a way a z-score of -1.3 is not). 
 
-`pct_extreme_late` (share of a seller's orders more than 30 days late) was pulled out of the weighted score entirely, because 83.4% of sellers have zero extreme-late orders — percentile ranking a metric that's zero for five out of six sellers doesn't discriminate between them, it just adds noise. It survives instead as a standalone binary flag, which is arguably more useful operationally anyway: "has this seller ever had a catastrophic delivery failure" is a yes/no question, not a spectrum.
+`pct_extreme_late` (share of a seller's orders more than 30 days late) was pulled out of the weighted score entirely, because 83.4% of scored sellers have zero extreme-late orders — percentile ranking a metric that's zero for five out of six sellers doesn't discriminate between them, it just adds noise. It survives instead as a standalone binary flag, which is arguably more useful operationally anyway: "has this seller ever had a catastrophic delivery failure" is a yes/no question, not a spectrum.
+
+**health score components and justification:**
+- **Review score (40%):** Primary reputation signal — 
+  directly reflects customer experience and platform 
+  reputation. Given the highest weight as it is the 
+  most direct measure of seller impact on Olist's 
+  collective reputation.
+  
+- **Late order rate (28%):** EDA confirmed a sharp 
+  threshold effect — even 1 day late triggers dramatic 
+  review score deterioration. Binary reliability signal 
+  given second highest weight (see [section 4](#4-insights-deep-dive) for evidence of the binary relationship between late orders and satisfaction). 
+  
+- **1-star rate (22%):** Captures extreme dissatisfaction 
+  that average score can mask. A seller with a 3.5 
+  average driven by many 1-star reviews is a different 
+  risk profile from one with a 3.5 average driven by 
+  mostly 3-star reviews.
+  
+- **Avg actual delivery days (10%):** Measures absolute 
+  customer wait experience independently of whether 
+  estimates were met. Partially outside seller control 
+  (geographic distance) so weighted lower.
 
 The resulting weights were stress-tested with a sensitivity analysis across two alternative configurations:
 
@@ -149,9 +171,9 @@ The resulting weights were stress-tested with a sensitivity analysis across two 
 | One-star review rate | 22% | 18% | 15% |
 | Average delivery days | 10% | 9% | 25% |
 
-Across these three configurations, 91.3% of sellers land in the same tier regardless of which weighting is used, 87.6% stability specifically within the At Risk tier, and critically, **no seller ever jumps from At Risk directly to Healthy** — the worst instability observed is a seller shifting into or out of the adjacent Monitor tier. That's the standard a scoring system needs to clear before it's trusted for something as consequential as flagging a seller for intervention: the boundary cases (108 sellers, 8.7%, flagged `boundary_case_flag`) are known and named, not hidden.
+Across these three configurations, 91.3% of sellers land in the same tier regardless of which weighting is used, 87.6% stability specifically within the At Risk tier, and critically, **no seller ever jumps from At Risk directly to Healthy** — the worst instability observed is a seller shifting into or out of the adjacent Monitor tier. The boundary cases (108 sellers, 8.7%, flagged `boundary_case_flag`) are known and named, not hidden.
 
-The 15th/40th-percentile cutoffs for At Risk / Monitor / Healthy were a judgment call rather than a statistically-derived breakpoint. The 15th-percentile line was chosen partly because it produces 186 At Risk sellers — a caseload the Seller Success team can realistically work through with active, individualised outreach, rather than a number so large it would force a lighter-touch, less effective response. The robustness check that matters most for a threshold chosen this way is the one above: the tier boundary held even as the underlying weights shifted across all three configurations tested.
+The **15th/40th-percentile cutoffs** for At Risk / Monitor / Healthy were a judgment call rather than a statistically-derived breakpoint. The 15th-percentile line was chosen partly because it produces 186 At Risk sellers — a caseload the Seller Success team can realistically work through with active, individualised outreach, rather than a number so large it would force a lighter-touch, less effective response. The robustness check that matters most for a threshold chosen this way is the one above: the tier boundary held even as the underlying weights shifted across all three configurations tested.
 
 ### 6.2 Complaint Classification
 
@@ -166,7 +188,7 @@ Six complaint categories were built from keyword matching against Portuguese rev
 | Product Quality | 70% | Moderate |
 | Poor Packaging | 70% | Moderate |
 
-40% of negative reviews remain uncategorised. Some are short emotional expressions ("péssimo," "horrível") with no diagnostic detail, and a smaller share show a mismatch between the numeric score and the text sentiment. But a meaningful portion are longer, substantive reviews written in idiomatic Portuguese that a keyword dictionary isn't equipped to parse — genuine complaints the dictionary failed to catch, not noise. This is discussed further in [Limitations](#11-limitations-and-caveats); it's a real ceiling on a keyword-based approach, not a bug to hide.
+40% of negative reviews remain uncategorised. Some are short emotional expressions ("péssimo," "horrível") with no diagnostic detail, and a smaller share show a mismatch between the numeric score and the text sentiment. But a meaningful portion are longer, substantive reviews written in idiomatic Portuguese that a keyword dictionary isn't equipped to parse — genuine complaints the dictionary failed to catch, not noise. This is discussed further in [Limitations](#11-limitations-and-caveats).
 
 Delivery-related complaints (Non-Delivery + Delivery Delay, deduplicated — a review naming both counts once toward this combined total, not twice) account for 977 of the 1,397 categorised reviews (69.9%); product-related complaints (Wrong Product + Product Quality) account for 393 (28.1%). Some reviews raise more than one complaint type at once; sellers whose categorised reviews average 1.5 or more complaint categories per review are flagged with a `compound_failure` indicator.
 
@@ -282,11 +304,11 @@ This analysis is decision-support, not ground truth — the following should be 
 
 ## 12. AI Tool Usage
 
-I collaborated with Claude (Anthropic) throughout this project — for exploratory analysis framing, SQL drafting and debugging, statistical methodology review, Tableau calculated-field logic, and documentation. All AI-generated and co-created content was reviewed and validated before being accepted into the final analysis: statistical claims were checked against primary sources, generated SQL was verified against real query outputs, and methodology conclusions were tested rather than taken on faith. The final output — its accuracy, its interpretations, and its presentation — is my responsibility.
+I collaborated with Claude (Anthropic) throughout this project — for exploratory analysis framing, SQL drafting and debugging, statistical methodology review, Tableau calculated-field logic, and documentation. All AI-generated and co-created content was reviewed and validated before being accepted into the final analysis: statistical claims were checked against primary sources, generated SQL was verified against real query outputs, and methodology conclusions were tested rather than taken on faith. The final output accurately reflects my understanding and its accuracy, its interpretations, and its presentation are my responsibility.
 
-One example: an early version of the seller feature table returned review response rates above 100% for some sellers — a mathematical impossibility that AI-generated code had produced but not caught. Diagnosing it surfaced a multi-item order duplication problem in the join chain, fixed by restructuring the query with a CTE that pre-aggregates to the order level before computing seller-level rates.
+One **example of discernment**: an early version of the seller feature table returned review response rates above 100% for some sellers — a mathematical impossibility that AI-generated code had produced but not caught. Diagnosing it surfaced a multi-item order duplication problem in the join chain, fixed by restructuring the query with a CTE that pre-aggregates to the order level before computing seller-level rates.
 
-See [`AI_diligence_statement.md`](AI_diligence_statement.md) for the full disclosure, including four further examples of where I corrected, refined, or verified AI output before it entered this analysis.
+See [`AI_diligence_statement.md`](AI_diligence_statement.md) for the full disclosure, including further examples of where I corrected, refined, or verified AI output before it entered this analysis.
 
 ---
 
